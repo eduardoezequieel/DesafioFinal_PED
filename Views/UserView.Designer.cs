@@ -1,14 +1,14 @@
-﻿namespace ProyectoFinal_PED
+﻿namespace ProyectoFinal_PED.Views
 {
-    partial class Form1
+    partial class UserView
     {
-        /// <summary>
-        ///  Required designer variable.
+        /// <summary> 
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
+        /// <summary> 
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -34,21 +34,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(367, 212);
+            label1.Location = new Point(452, 282);
             label1.Name = "label1";
-            label1.Size = new Size(74, 15);
+            label1.Size = new Size(112, 15);
             label1.TabIndex = 0;
-            label1.Text = "Hola mundo";
-            label1.Click += label1_Click;
+            label1.Text = "Pantalla de usuarios";
             // 
-            // Form1
+            // UserView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.AppWorkspace;
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "UserView";
+            Size = new Size(1019, 663);
             ResumeLayout(false);
             PerformLayout();
         }

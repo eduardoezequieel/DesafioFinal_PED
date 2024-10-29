@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\ProyectoFinal_PED\\ProyectoFinal_PED.csproj": {}
+    "C:\\Users\\Eduardo Lopez\\Documents\\GitHub\\DesafioFinal_PED\\ProyectoFinal_PED.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\ProyectoFinal_PED\\ProyectoFinal_PED.csproj": {
+    "C:\\Users\\Eduardo Lopez\\Documents\\GitHub\\DesafioFinal_PED\\ProyectoFinal_PED.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProyectoFinal_PED\\ProyectoFinal_PED.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo Lopez\\Documents\\GitHub\\DesafioFinal_PED\\ProyectoFinal_PED.csproj",
         "projectName": "ProyectoFinal_PED",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProyectoFinal_PED\\ProyectoFinal_PED.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProyectoFinal_PED\\obj\\",
+        "projectPath": "C:\\Users\\Eduardo Lopez\\Documents\\GitHub\\DesafioFinal_PED\\ProyectoFinal_PED.csproj",
+        "packagesPath": "C:\\Users\\Eduardo Lopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eduardo Lopez\\Documents\\GitHub\\DesafioFinal_PED\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Eduardo Lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

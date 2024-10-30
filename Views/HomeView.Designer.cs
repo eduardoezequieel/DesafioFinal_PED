@@ -44,7 +44,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = SystemColors.ButtonFace;
             Controls.Add(label1);
             Name = "HomeView";
             Size = new Size(1019, 663);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_PED.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_PED.Views
 {
-    public partial class UserView : UserControl
+    public partial class UserManagementView : UserControl
     {
-        public UserView()
+        public UserManagementView()
         {
             InitializeComponent();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new UserFormView());
         }
     }
 }

@@ -1,3 +1,4 @@
+using ProyectoFinal_PED.Helpers;
 using ProyectoFinal_PED.Views;
 
 namespace ProyectoFinal_PED
@@ -8,13 +9,8 @@ namespace ProyectoFinal_PED
         {
             InitializeComponent();
 
-            this.panelContainer.Controls.Add(new HomeView());
-        }
-
-        private void LoadView(UserControl viewToShow)
-        {
-            panelContainer.Controls.Clear();
-            panelContainer.Controls.Add(viewToShow);
+            GlobalState.SetPanelContainer(panelContainer);
+            GlobalState.LoadView(new HomeView());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -29,12 +25,12 @@ namespace ProyectoFinal_PED
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            LoadView(new HomeView());
+            GlobalState.LoadView(new HomeView());
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            LoadView(new UserView());
+            GlobalState.LoadView(new UserManagementView());
         }
     }
 }

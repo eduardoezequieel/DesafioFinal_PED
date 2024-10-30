@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            textBox1 = new TextBox();
             panel3 = new Panel();
             textBox2 = new TextBox();
             label2 = new Label();
             panel2 = new Panel();
-            textBox1 = new TextBox();
             btnContinue = new Button();
             label1 = new Label();
             btnClose = new Button();
@@ -55,6 +55,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(459, 310);
             panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(247, 246, 244);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(10, 10);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(378, 22);
+            textBox1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -94,16 +104,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(398, 42);
             panel2.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(247, 246, 244);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(10, 10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(378, 22);
-            textBox1.TabIndex = 0;
             // 
             // btnContinue
             // 

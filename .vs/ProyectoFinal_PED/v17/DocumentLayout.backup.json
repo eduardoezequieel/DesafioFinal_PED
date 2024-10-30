@@ -1,38 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\",
+  "WorkspaceRootPath": "D:\\UDB\\Codigo\\DesafioFinal_PED\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|D:\\UDB\\Codigo\\DesafioFinal_PED\\views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\dashboardview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\signinview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|D:\\UDB\\Codigo\\DesafioFinal_PED\\views\\signinview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\signinview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|c:\\users\\user\\source\\repos\\desafiofinal_ped\\views\\userformview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\usermanagementview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\menuview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:menuview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\views\\userformview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\userformview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|D:\\UDB\\Codigo\\DesafioFinal_PED\\views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|d:\\udb\\codigo\\desafiofinal_ped\\views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07F3CB41-EA04-4D96-BA2B-BA6788767FF2}|ProyectoFinal_PED.csproj|solutionrelative:views\\userformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,85 +54,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 152,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignInView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\SignInView.cs",
-              "RelativeDocumentMoniker": "Views\\SignInView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\SignInView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\SignInView.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:18:05.139Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserManagementView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserManagementView.cs",
-              "RelativeDocumentMoniker": "Views\\UserManagementView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserManagementView.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Views\\UserManagementView.cs [Dise\u00F1o]*",
+              "Title": "MenuView.cs [Design]",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\MenuView.cs",
+              "RelativeDocumentMoniker": "MenuView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\MenuView.cs [Design]",
+              "RelativeToolTip": "MenuView.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:17:56.093Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-30T04:05:52.505Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MenuView.Designer.cs",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\MenuView.Designer.cs",
+              "RelativeDocumentMoniker": "MenuView.Designer.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\MenuView.Designer.cs",
+              "RelativeToolTip": "MenuView.Designer.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAqwDsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T04:56:38.112Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DashboardView.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\DashboardView.cs",
+              "Title": "DashboardView.cs [Design]",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\DashboardView.cs",
               "RelativeDocumentMoniker": "Views\\DashboardView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\DashboardView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\DashboardView.cs [Design]",
+              "RelativeToolTip": "Views\\DashboardView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T03:16:53.739Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserManagementView.cs [Design]",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserManagementView.cs",
+              "RelativeDocumentMoniker": "Views\\UserManagementView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserManagementView.cs [Design]",
+              "RelativeToolTip": "Views\\UserManagementView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T03:17:56.093Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuView.cs",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\MenuView.cs",
+              "RelativeDocumentMoniker": "MenuView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\MenuView.cs",
+              "RelativeToolTip": "MenuView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T04:20:47.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserFormView.cs [Design]",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserFormView.cs",
+              "RelativeDocumentMoniker": "Views\\UserFormView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserFormView.cs [Design]",
+              "RelativeToolTip": "Views\\UserFormView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T03:15:33.741Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserFormView.Designer.cs",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserFormView.Designer.cs",
+              "RelativeDocumentMoniker": "Views\\UserFormView.Designer.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserFormView.Designer.cs",
+              "RelativeToolTip": "Views\\UserFormView.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T03:16:43.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SignInView.cs [Design]",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\SignInView.cs",
+              "RelativeDocumentMoniker": "Views\\SignInView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\SignInView.cs [Design]",
+              "RelativeToolTip": "Views\\SignInView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T03:18:05.139Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardView.cs",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\DashboardView.cs",
+              "RelativeDocumentMoniker": "Views\\DashboardView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\DashboardView.cs",
               "RelativeToolTip": "Views\\DashboardView.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAhwB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwCUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T03:17:00.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DashboardView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\DashboardView.cs",
-              "RelativeDocumentMoniker": "Views\\DashboardView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\DashboardView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\DashboardView.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:16:53.739Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "UserManagementView.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserManagementView.cs",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserManagementView.cs",
               "RelativeDocumentMoniker": "Views\\UserManagementView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserManagementView.cs*",
-              "RelativeToolTip": "Views\\UserManagementView.cs*",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserManagementView.cs",
+              "RelativeToolTip": "Views\\UserManagementView.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAArwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T03:15:40.751Z",
@@ -128,51 +195,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserFormView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserFormView.cs",
-              "RelativeDocumentMoniker": "Views\\UserFormView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserFormView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\UserFormView.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:15:33.741Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "UserFormView.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserFormView.cs",
+              "DocumentMoniker": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserFormView.cs",
               "RelativeDocumentMoniker": "Views\\UserFormView.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\DesafioFinal_PED\\Views\\UserFormView.cs",
+              "ToolTip": "D:\\UDB\\Codigo\\DesafioFinal_PED\\Views\\UserFormView.cs",
               "RelativeToolTip": "Views\\UserFormView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T03:19:31.978Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserFormView.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\Views\\UserFormView.Designer.cs",
-              "RelativeDocumentMoniker": "Views\\UserFormView.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\Views\\UserFormView.Designer.cs",
-              "RelativeToolTip": "Views\\UserFormView.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:16:43.264Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 193,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

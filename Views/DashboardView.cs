@@ -32,5 +32,10 @@ namespace ProyectoFinal_PED
         {
             GlobalState.LoadView(new UserManagementView());
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new MenuView());
+        }
     }
 }

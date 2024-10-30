@@ -4,6 +4,12 @@
     <Compile Update="Views\HomeView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\InvoiceFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\InvoiceManagementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\SignInView.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -42,5 +42,10 @@ namespace ProyectoFinal_PED
         {
             GlobalState.LoadView(new TableManagementView());
         }
+
+        private void d(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

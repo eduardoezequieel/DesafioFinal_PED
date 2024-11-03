@@ -28,23 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
-            btnAddUser = new Button();
+            userTbl = new DataGridView();
             username = new DataGridViewTextBoxColumn();
             rol = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            label1 = new Label();
+            btnAddUser = new Button();
+            ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // userTbl
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { username, rol });
-            dataGridView1.Location = new Point(16, 117);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(986, 530);
-            dataGridView1.TabIndex = 0;
+            userTbl.BackgroundColor = Color.White;
+            userTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            userTbl.Columns.AddRange(new DataGridViewColumn[] { username, rol });
+            userTbl.Location = new Point(16, 117);
+            userTbl.Name = "userTbl";
+            userTbl.Size = new Size(986, 530);
+            userTbl.TabIndex = 0;
+            // 
+            // username
+            // 
+            username.HeaderText = "Usuario";
+            username.Name = "username";
+            username.ReadOnly = true;
+            username.Width = 500;
+            // 
+            // rol
+            // 
+            rol.HeaderText = "Rol";
+            rol.Name = "rol";
+            rol.ReadOnly = true;
+            rol.Width = 500;
             // 
             // label1
             // 
@@ -72,20 +86,6 @@
             btnAddUser.UseVisualStyleBackColor = false;
             btnAddUser.Click += btnAddUser_Click;
             // 
-            // username
-            // 
-            username.HeaderText = "Usuario";
-            username.Name = "username";
-            username.ReadOnly = true;
-            username.Width = 500;
-            // 
-            // rol
-            // 
-            rol.HeaderText = "Rol";
-            rol.Name = "rol";
-            rol.ReadOnly = true;
-            rol.Width = 500;
-            // 
             // UserManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -93,17 +93,17 @@
             BackColor = Color.White;
             Controls.Add(btnAddUser);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(userTbl);
             Name = "UserManagementView";
             Size = new Size(1019, 663);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userTbl).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;        
+        private DataGridView userTbl;        
         private Label label1;
         private Button btnAddUser;
         private DataGridViewTextBoxColumn username;

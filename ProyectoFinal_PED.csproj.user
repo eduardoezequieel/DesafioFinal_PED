@@ -13,6 +13,12 @@
     <Compile Update="Views\SignInView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\TableFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\TableManagementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\UserFormView.cs">
       <SubType>UserControl</SubType>
     </Compile>

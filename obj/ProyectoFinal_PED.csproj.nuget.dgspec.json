@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\ProyectoFinal_PED.csproj": {}
+    "C:\\Users\\Diego Esnard\\OneDrive\\Documents\\DesafioFinal_PED\\ProyectoFinal_PED.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\ProyectoFinal_PED.csproj": {
+    "C:\\Users\\Diego Esnard\\OneDrive\\Documents\\DesafioFinal_PED\\ProyectoFinal_PED.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\ProyectoFinal_PED.csproj",
+        "projectUniqueName": "C:\\Users\\Diego Esnard\\OneDrive\\Documents\\DesafioFinal_PED\\ProyectoFinal_PED.csproj",
         "projectName": "ProyectoFinal_PED",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\ProyectoFinal_PED.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\DesafioFinal_PED\\obj\\",
+        "projectPath": "C:\\Users\\Diego Esnard\\OneDrive\\Documents\\DesafioFinal_PED\\ProyectoFinal_PED.csproj",
+        "packagesPath": "C:\\Users\\Diego Esnard\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diego Esnard\\OneDrive\\Documents\\DesafioFinal_PED\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego Esnard\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

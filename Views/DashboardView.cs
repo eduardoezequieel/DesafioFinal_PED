@@ -37,5 +37,10 @@ namespace ProyectoFinal_PED
         {
             GlobalState.LoadView(new MenuView());
         }
+
+        private void btnMesas_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new TableManagementView());
+        }
     }
 }

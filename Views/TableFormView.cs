@@ -11,26 +11,21 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_PED.Views
 {
-    public partial class UserFormView : UserControl
+    public partial class TableFormView : UserControl
     {
-        public UserFormView()
+        public TableFormView()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            GlobalState.LoadView(new UserManagementView());
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
+            GlobalState.LoadView(new TableManagementView());
         }
     }
 }

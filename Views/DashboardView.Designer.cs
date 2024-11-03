@@ -87,7 +87,7 @@
             panel1.Location = new Point(0, -1);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(263, 963);
+            panel1.Size = new Size(230, 722);
             panel1.TabIndex = 11;
             // 
             // btnInvoices
@@ -97,10 +97,9 @@
             btnInvoices.FlatStyle = FlatStyle.Flat;
             btnInvoices.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInvoices.ForeColor = SystemColors.ButtonHighlight;
-            btnInvoices.Location = new Point(14, 420);
-            btnInvoices.Margin = new Padding(3, 4, 3, 4);
+            btnInvoices.Location = new Point(12, 315);
             btnInvoices.Name = "btnInvoices";
-            btnInvoices.Size = new Size(237, 48);
+            btnInvoices.Size = new Size(207, 36);
             btnInvoices.TabIndex = 20;
             btnInvoices.Text = "Facturas";
             btnInvoices.UseVisualStyleBackColor = false;
@@ -112,10 +111,9 @@
             btnOrders.FlatStyle = FlatStyle.Flat;
             btnOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnOrders.ForeColor = SystemColors.ButtonHighlight;
-            btnOrders.Location = new Point(14, 359);
-            btnOrders.Margin = new Padding(3, 4, 3, 4);
+            btnOrders.Location = new Point(12, 269);
             btnOrders.Name = "btnOrders";
-            btnOrders.Size = new Size(237, 48);
+            btnOrders.Size = new Size(207, 36);
             btnOrders.TabIndex = 19;
             btnOrders.Text = "Ordenes";
             btnOrders.UseVisualStyleBackColor = false;
@@ -127,10 +125,9 @@
             btnReservas.FlatStyle = FlatStyle.Flat;
             btnReservas.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReservas.ForeColor = SystemColors.ButtonHighlight;
-            btnReservas.Location = new Point(14, 296);
-            btnReservas.Margin = new Padding(3, 4, 3, 4);
+            btnReservas.Location = new Point(12, 222);
             btnReservas.Name = "btnReservas";
-            btnReservas.Size = new Size(237, 48);
+            btnReservas.Size = new Size(207, 36);
             btnReservas.TabIndex = 18;
             btnReservas.Text = "Reservas";
             btnReservas.UseVisualStyleBackColor = false;
@@ -142,13 +139,13 @@
             btnMesas.FlatStyle = FlatStyle.Flat;
             btnMesas.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMesas.ForeColor = SystemColors.ButtonHighlight;
-            btnMesas.Location = new Point(14, 231);
-            btnMesas.Margin = new Padding(3, 4, 3, 4);
+            btnMesas.Location = new Point(12, 173);
             btnMesas.Name = "btnMesas";
-            btnMesas.Size = new Size(237, 48);
+            btnMesas.Size = new Size(207, 36);
             btnMesas.TabIndex = 17;
             btnMesas.Text = "Mesas";
             btnMesas.UseVisualStyleBackColor = false;
+            btnMesas.Click += btnMesas_Click;
             // 
             // btnMenu
             // 
@@ -157,14 +154,12 @@
             btnMenu.FlatStyle = FlatStyle.Flat;
             btnMenu.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMenu.ForeColor = SystemColors.ButtonHighlight;
-            btnMenu.Location = new Point(14, 167);
-            btnMenu.Margin = new Padding(3, 4, 3, 4);
+            btnMenu.Location = new Point(12, 125);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(237, 48);
+            btnMenu.Size = new Size(207, 36);
             btnMenu.TabIndex = 16;
             btnMenu.Text = "Menú";
             btnMenu.UseVisualStyleBackColor = false;
-            btnMenu.Click += btnMenu_Click;
             // 
             // btnHome
             // 

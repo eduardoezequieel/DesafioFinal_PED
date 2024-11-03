@@ -16,5 +16,10 @@ namespace ProyectoFinal_PED
         {
             InitializeComponent();
         }
+
+        private void btnAddMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

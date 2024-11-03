@@ -30,11 +30,10 @@
         {
             label1 = new Label();
             dataGridMenu = new DataGridView();
+            btnAddMenu = new Button();
             nombre_menu = new DataGridViewTextBoxColumn();
             precio_menu = new DataGridViewTextBoxColumn();
-            tipo_menu = new DataGridViewTextBoxColumn();
-            items_menu = new DataGridViewTextBoxColumn();
-            btnAddMenu = new Button();
+            description_menu = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridMenu).BeginInit();
             SuspendLayout();
             // 
@@ -45,49 +44,21 @@
             label1.ForeColor = Color.FromArgb(8, 51, 83);
             label1.Location = new Point(27, 29);
             label1.Name = "label1";
-            label1.Size = new Size(204, 30);
+            label1.Size = new Size(80, 30);
             label1.TabIndex = 7;
-            label1.Text = "Creacion de Menus";
+            label1.Text = "Menús";
             // 
             // dataGridMenu
             // 
             dataGridMenu.BackgroundColor = Color.White;
             dataGridMenu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridMenu.Columns.AddRange(new DataGridViewColumn[] { nombre_menu, precio_menu, tipo_menu, items_menu });
+            dataGridMenu.Columns.AddRange(new DataGridViewColumn[] { nombre_menu, precio_menu, description_menu });
             dataGridMenu.Location = new Point(18, 156);
             dataGridMenu.Margin = new Padding(3, 4, 3, 4);
             dataGridMenu.Name = "dataGridMenu";
             dataGridMenu.RowHeadersWidth = 51;
             dataGridMenu.Size = new Size(1127, 707);
             dataGridMenu.TabIndex = 0;
-            // 
-            // nombre_menu
-            // 
-            nombre_menu.HeaderText = "Nombre del Menu";
-            nombre_menu.MinimumWidth = 6;
-            nombre_menu.Name = "nombre_menu";
-            nombre_menu.Width = 200;
-            // 
-            // precio_menu
-            // 
-            precio_menu.HeaderText = "Precio";
-            precio_menu.MinimumWidth = 6;
-            precio_menu.Name = "precio_menu";
-            precio_menu.Width = 125;
-            // 
-            // tipo_menu
-            // 
-            tipo_menu.HeaderText = "Tipo de menu";
-            tipo_menu.MinimumWidth = 6;
-            tipo_menu.Name = "tipo_menu";
-            tipo_menu.Width = 170;
-            // 
-            // items_menu
-            // 
-            items_menu.HeaderText = "Comida incluida";
-            items_menu.MinimumWidth = 6;
-            items_menu.Name = "items_menu";
-            items_menu.Width = 550;
             // 
             // btnAddMenu
             // 
@@ -104,6 +75,27 @@
             btnAddMenu.Text = "Agregar";
             btnAddMenu.UseVisualStyleBackColor = false;
             btnAddMenu.Click += btnAddMenu_Click;
+            // 
+            // nombre_menu
+            // 
+            nombre_menu.HeaderText = "Nombre del Menu";
+            nombre_menu.MinimumWidth = 6;
+            nombre_menu.Name = "nombre_menu";
+            nombre_menu.Width = 250;
+            // 
+            // precio_menu
+            // 
+            precio_menu.HeaderText = "Precio";
+            precio_menu.MinimumWidth = 6;
+            precio_menu.Name = "precio_menu";
+            precio_menu.Width = 125;
+            // 
+            // description_menu
+            // 
+            description_menu.HeaderText = "Descripción";
+            description_menu.MinimumWidth = 6;
+            description_menu.Name = "description_menu";
+            description_menu.Width = 680;
             // 
             // MenuView
             // 
@@ -131,10 +123,9 @@
 
         private Label label1;
         private DataGridView dataGridMenu;
+        private Button btnAddMenu;
         private DataGridViewTextBoxColumn nombre_menu;
         private DataGridViewTextBoxColumn precio_menu;
-        private DataGridViewTextBoxColumn tipo_menu;
-        private DataGridViewTextBoxColumn items_menu;
-        private Button btnAddMenu;
+        private DataGridViewTextBoxColumn description_menu;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoFinal_PED.Helpers;
+using ProyectoFinal_PED.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,7 @@ namespace ProyectoFinal_PED
 
         private void btnAddMenu_Click(object sender, EventArgs e)
         {
-
+            GlobalState.LoadView(new AddMenu());
         }
     }
 }

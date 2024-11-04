@@ -16,6 +16,9 @@
     <Compile Update="Views\InvoiceManagementView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\OrdersViewForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\SignInView.cs">
       <SubType>Form</SubType>
     </Compile>

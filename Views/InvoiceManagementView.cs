@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_PED.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,11 @@ namespace ProyectoFinal_PED.Views
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new InvoiceFormView());
         }
     }
 }

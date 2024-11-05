@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_PED.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,11 @@ namespace ProyectoFinal_PED.Views
         private void dataGridMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new InvoiceManagementView());
         }
     }
 }

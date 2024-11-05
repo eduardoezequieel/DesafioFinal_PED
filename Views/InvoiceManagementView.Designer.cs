@@ -45,9 +45,9 @@ namespace ProyectoFinal_PED.Views
             TITLE.Enabled = false;
             TITLE.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TITLE.ForeColor = SystemColors.InfoText;
-            TITLE.Location = new Point(19, 21);
+            TITLE.Location = new Point(17, 16);
             TITLE.Name = "TITLE";
-            TITLE.Size = new Size(116, 31);
+            TITLE.Size = new Size(96, 25);
             TITLE.TabIndex = 0;
             TITLE.Text = "FACTURA";
             // 
@@ -58,24 +58,23 @@ namespace ProyectoFinal_PED.Views
             btnAddUser.FlatStyle = FlatStyle.Flat;
             btnAddUser.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddUser.ForeColor = SystemColors.ButtonHighlight;
-            btnAddUser.Location = new Point(908, 21);
-            btnAddUser.Margin = new Padding(3, 4, 3, 4);
+            btnAddUser.Location = new Point(794, 16);
             btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(186, 60);
+            btnAddUser.Size = new Size(163, 45);
             btnAddUser.TabIndex = 8;
             btnAddUser.Text = "Agregar";
             btnAddUser.UseVisualStyleBackColor = false;
+            btnAddUser.Click += btnAddUser_Click;
             // 
             // dataGridMenu
             // 
             dataGridMenu.BackgroundColor = Color.White;
             dataGridMenu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridMenu.Columns.AddRange(new DataGridViewColumn[] { numero_orden, cliente_nombre, DUI_CLIENTE, Email });
-            dataGridMenu.Location = new Point(19, 89);
-            dataGridMenu.Margin = new Padding(3, 4, 3, 4);
+            dataGridMenu.Location = new Point(17, 67);
             dataGridMenu.Name = "dataGridMenu";
             dataGridMenu.RowHeadersWidth = 51;
-            dataGridMenu.Size = new Size(1100, 697);
+            dataGridMenu.Size = new Size(962, 523);
             dataGridMenu.TabIndex = 9;
             // 
             // numero_orden
@@ -108,13 +107,14 @@ namespace ProyectoFinal_PED.Views
             // 
             // InvoiceManagementView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridMenu);
             Controls.Add(btnAddUser);
             Controls.Add(TITLE);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "InvoiceManagementView";
-            Size = new Size(1165, 884);
+            Size = new Size(1019, 663);
             Load += InvoiceManagementView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridMenu).EndInit();
             ResumeLayout(false);

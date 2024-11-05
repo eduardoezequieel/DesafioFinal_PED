@@ -101,6 +101,7 @@
             btnInvoices.TabIndex = 20;
             btnInvoices.Text = "Facturas";
             btnInvoices.UseVisualStyleBackColor = false;
+            btnInvoices.Click += btnInvoices_Click;
             // 
             // btnOrders
             // 

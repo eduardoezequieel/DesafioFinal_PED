@@ -34,11 +34,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(465, 269);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(445, 323);
             label1.Name = "label1";
-            label1.Size = new Size(66, 15);
+            label1.Size = new Size(141, 30);
             label1.TabIndex = 0;
-            label1.Text = "Bienvenido";
+            label1.Text = "Bienvenido :D";
             // 
             // HomeView
             // 

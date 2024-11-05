@@ -47,5 +47,10 @@ namespace ProyectoFinal_PED
         {
 
         }
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new InvoiceManagementView());
+        }
     }
 }

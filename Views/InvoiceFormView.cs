@@ -16,5 +16,15 @@ namespace ProyectoFinal_PED.Views
         {
             InitializeComponent();
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

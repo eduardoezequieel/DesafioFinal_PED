@@ -94,3 +94,5 @@
         CONSTRAINT fk_orden FOREIGN KEY (idOrden) REFERENCES orden(idOrden),
         CONSTRAINT fk_platillo FOREIGN KEY (idPlatillo) REFERENCES platillo(idPlatillo)
     )
+
+    INSERT INTO tipo_usuario(nombreTipoUsuario) VALUES ('Administrador');

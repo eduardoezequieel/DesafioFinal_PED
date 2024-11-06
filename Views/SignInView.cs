@@ -1,7 +1,7 @@
 namespace ProyectoFinal_PED
 {
     public partial class SignInView : Form
-    {
+    {        
         public SignInView()
         {
             InitializeComponent();

@@ -30,15 +30,15 @@
         {
             label1 = new Label();
             panel2 = new Panel();
-            textBox1 = new TextBox();
+            userTxt = new TextBox();
             label2 = new Label();
             panel1 = new Panel();
-            textBox2 = new TextBox();
+            passwordTxt = new TextBox();
             label3 = new Label();
             panel3 = new Panel();
-            comboBox1 = new ComboBox();
+            roleCb = new ComboBox();
             label4 = new Label();
-            btnAdd = new Button();
+            btnSubmit = new Button();
             btnBack = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -59,21 +59,21 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(247, 246, 244);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(userTxt);
             panel2.Location = new Point(314, 228);
             panel2.Name = "panel2";
             panel2.Size = new Size(398, 42);
             panel2.TabIndex = 8;
             // 
-            // textBox1
+            // userTxt
             // 
-            textBox1.BackColor = Color.FromArgb(247, 246, 244);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(10, 10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(378, 22);
-            textBox1.TabIndex = 0;
+            userTxt.BackColor = Color.FromArgb(247, 246, 244);
+            userTxt.BorderStyle = BorderStyle.None;
+            userTxt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userTxt.Location = new Point(10, 10);
+            userTxt.Name = "userTxt";
+            userTxt.Size = new Size(378, 22);
+            userTxt.TabIndex = 0;
             // 
             // label2
             // 
@@ -89,21 +89,21 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 246, 244);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(passwordTxt);
             panel1.Location = new Point(314, 321);
             panel1.Name = "panel1";
             panel1.Size = new Size(398, 42);
             panel1.TabIndex = 10;
             // 
-            // textBox2
+            // passwordTxt
             // 
-            textBox2.BackColor = Color.FromArgb(247, 246, 244);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(10, 10);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(378, 22);
-            textBox2.TabIndex = 0;
+            passwordTxt.BackColor = Color.FromArgb(247, 246, 244);
+            passwordTxt.BorderStyle = BorderStyle.None;
+            passwordTxt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordTxt.Location = new Point(10, 10);
+            passwordTxt.Name = "passwordTxt";
+            passwordTxt.Size = new Size(378, 22);
+            passwordTxt.TabIndex = 0;
             // 
             // label3
             // 
@@ -119,23 +119,23 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(247, 246, 244);
-            panel3.Controls.Add(comboBox1);
+            panel3.Controls.Add(roleCb);
             panel3.Location = new Point(311, 409);
             panel3.Name = "panel3";
             panel3.Size = new Size(398, 42);
             panel3.TabIndex = 12;
             // 
-            // comboBox1
+            // roleCb
             // 
-            comboBox1.BackColor = Color.FromArgb(247, 246, 244);
-            comboBox1.FlatStyle = FlatStyle.Popup;
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.ItemHeight = 21;
-            comboBox1.Location = new Point(9, 7);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(382, 29);
-            comboBox1.TabIndex = 13;
+            roleCb.BackColor = Color.FromArgb(247, 246, 244);
+            roleCb.FlatStyle = FlatStyle.Popup;
+            roleCb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roleCb.FormattingEnabled = true;
+            roleCb.ItemHeight = 21;
+            roleCb.Location = new Point(9, 7);
+            roleCb.Name = "roleCb";
+            roleCb.Size = new Size(382, 29);
+            roleCb.TabIndex = 13;
             // 
             // label4
             // 
@@ -149,20 +149,20 @@
             label4.Text = "Rol";
             label4.Click += label4_Click;
             // 
-            // btnAdd
+            // btnSubmit
             // 
-            btnAdd.BackColor = Color.FromArgb(250, 125, 95);
-            btnAdd.FlatAppearance.BorderSize = 0;
-            btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.ForeColor = SystemColors.ButtonHighlight;
-            btnAdd.Location = new Point(808, 600);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(194, 45);
-            btnAdd.TabIndex = 13;
-            btnAdd.Text = "Guardar cambios";
-            btnAdd.UseVisualStyleBackColor = false;
-            btnAdd.Click += btnAdd_Click;
+            btnSubmit.BackColor = Color.FromArgb(250, 125, 95);
+            btnSubmit.FlatAppearance.BorderSize = 0;
+            btnSubmit.FlatStyle = FlatStyle.Flat;
+            btnSubmit.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSubmit.ForeColor = SystemColors.ButtonHighlight;
+            btnSubmit.Location = new Point(808, 600);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.Size = new Size(194, 45);
+            btnSubmit.TabIndex = 13;
+            btnSubmit.Text = "Guardar cambios";
+            btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnAdd_Click;
             // 
             // btnBack
             // 
@@ -185,7 +185,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(btnBack);
-            Controls.Add(btnAdd);
+            Controls.Add(btnSubmit);
             Controls.Add(panel3);
             Controls.Add(label4);
             Controls.Add(panel1);
@@ -208,15 +208,15 @@
 
         private Label label1;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox userTxt;
         private Label label2;
         private Panel panel1;
-        private TextBox textBox2;
+        private TextBox passwordTxt;
         private Label label3;
         private Panel panel3;
         private Label label4;
-        private ComboBox comboBox1;
-        private Button btnAdd;
+        private ComboBox roleCb;
+        private Button btnSubmit;
         private Button btnBack;
     }
 }

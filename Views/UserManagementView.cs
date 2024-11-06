@@ -1,4 +1,6 @@
-﻿using ProyectoFinal_PED.Helpers;
+﻿using ProyectoFinal_PED.Controllers;
+using ProyectoFinal_PED.Helpers;
+using ProyectoFinal_PED.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,26 @@ namespace ProyectoFinal_PED.Views
 {
     public partial class UserManagementView : UserControl
     {
+        private UsersController usersController;
+        private List<User> users;
+
         public UserManagementView()
         {
             InitializeComponent();
+            this.usersController = new UsersController();
+            this.users = this.usersController.GetUsers();
+
+            this.LoadUsers();
+        }
+
+        private void LoadUsers()
+        {
+            this.userTbl.Rows.Clear();
+
+            foreach (User user in this.users)
+            {
+                this.userTbl.Rows.Add(user.GetUsername(), user.GetUserTypeName());
+            }
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)

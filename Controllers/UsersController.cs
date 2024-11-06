@@ -7,15 +7,40 @@ namespace ProyectoFinal_PED.Controllers
     internal class UsersController
     {
         private List<User> users;
+        private List<UserType> userTypes;
 
         public UsersController()
         {
             this.users = new List<User>();
+            this.userTypes = new List<UserType>();
         }
 
-        public void AddUser(User user)
+        public bool AddUser(User user)
         {
-            this.users.Add(user);
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = connection.GetConnection();
+            string query = "INSERT INTO usuario (usuario, contrasena, idTipoUsuario) VALUES (@username, @password, @userType)";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.AddWithValue("@username", user.GetUsername());
+                command.Parameters.AddWithValue("@password", user.GetPassword());
+                command.Parameters.AddWithValue("@userType", user.GetUserType());
+
+                int result = command.ExecuteNonQuery();
+
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar la inserción: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         public List<User> GetUsers()
@@ -55,6 +80,42 @@ namespace ProyectoFinal_PED.Controllers
             }
 
             return this.users;
+        }
+
+        public List<UserType> GetUserTypes()
+        {
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = connection.GetConnection();
+
+            string query = "SELECT*FROM tipo_usuario;";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var id = reader["idTipoUsuario"];
+                    var userTypeName = reader["nombreTipoUsuario"];
+
+                    UserType userType = new UserType((int)id, (string)userTypeName);
+
+                    this.userTypes.Add(userType);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar la consulta: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            return this.userTypes;
         }
     }
 }

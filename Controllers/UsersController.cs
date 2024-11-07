@@ -15,10 +15,48 @@ namespace ProyectoFinal_PED.Controllers
             this.userTypes = new List<UserType>();
         }
 
-        public bool AddUser(User user)
+        public async Task<(bool result, string message)> SignIn(string username, string password)
         {
             DatabaseConnection connection = new DatabaseConnection();
-            SqlConnection cn = connection.GetConnection();
+            SqlConnection cn = await connection.GetConnection();
+
+            string query = "SELECT * FROM usuario WHERE usuario = @username";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.AddWithValue("@username", username);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                User foundUser = null;
+
+                while (reader.Read()) { 
+                    var id = reader["idUsuario"];
+                    var userType = reader["idTipoUsuario"];
+                    var usernameFromDB = reader["usuario"];
+                    var passwordFromDb = reader["contrasena"];
+
+                    //foundUser = new User(id, usernameFromDB, passwordFromDb, userType, "");
+                }   
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            return (true, "message");
+        }
+
+        public async Task<bool> AddUser(User user)
+        {
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = await connection.GetConnection();
             string query = "INSERT INTO usuario (usuario, contrasena, idTipoUsuario) VALUES (@username, @password, @userType)";
 
             try
@@ -28,7 +66,7 @@ namespace ProyectoFinal_PED.Controllers
                 command.Parameters.AddWithValue("@password", user.GetPassword());
                 command.Parameters.AddWithValue("@userType", user.GetUserType());
 
-                int result = command.ExecuteNonQuery();
+                int result = await command.ExecuteNonQueryAsync();
 
                 return result > 0;
             }
@@ -39,23 +77,23 @@ namespace ProyectoFinal_PED.Controllers
             }
             finally
             {
-                cn.Close();
+                await cn.CloseAsync();
             }
         }
 
-        public List<User> GetUsers()
+        public async Task<List<User>> GetUsers()
         {
             DatabaseConnection connection = new DatabaseConnection();
-            SqlConnection cn = connection.GetConnection();
+            SqlConnection cn = await connection.GetConnection();
 
             string query = "SELECT u.idUsuario, u.usuario, u.contrasena, tu.nombreTipoUsuario, tu.idTipoUsuario FROM usuario AS u INNER JOIN tipo_usuario AS tu ON u.idTipoUsuario = tu.idTipoUsuario;";
 
             try
             {
                 SqlCommand command = new SqlCommand(query, cn);
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var id = reader["idUsuario"];
                     var username = reader["usuario"];
@@ -68,7 +106,7 @@ namespace ProyectoFinal_PED.Controllers
                     this.users.Add(user);
                 }
 
-                reader.Close();
+                await reader.CloseAsync();
             }
             catch (Exception ex)
             {
@@ -76,25 +114,25 @@ namespace ProyectoFinal_PED.Controllers
             }
             finally
             {
-                cn.Close();
+                await cn.CloseAsync();
             }
 
             return this.users;
         }
 
-        public List<UserType> GetUserTypes()
+        public async Task<List<UserType>> GetUserTypes()
         {
             DatabaseConnection connection = new DatabaseConnection();
-            SqlConnection cn = connection.GetConnection();
+            SqlConnection cn = await connection.GetConnection();
 
             string query = "SELECT*FROM tipo_usuario;";
 
             try
             {
                 SqlCommand command = new SqlCommand(query, cn);
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var id = reader["idTipoUsuario"];
                     var userTypeName = reader["nombreTipoUsuario"];
@@ -104,7 +142,7 @@ namespace ProyectoFinal_PED.Controllers
                     this.userTypes.Add(userType);
                 }
 
-                reader.Close();
+                await reader.CloseAsync();
             }
             catch (Exception ex)
             {
@@ -112,7 +150,7 @@ namespace ProyectoFinal_PED.Controllers
             }
             finally
             {
-                cn.Close();
+                await cn.CloseAsync();
             }
 
             return this.userTypes;

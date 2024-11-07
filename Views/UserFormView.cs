@@ -17,19 +17,20 @@ namespace ProyectoFinal_PED.Views
     public partial class UserFormView : UserControl
     {
         private UsersController usersController;
-        private List<UserType> userTypes;
+        private List<UserType> userTypes = new List<UserType>();
 
         public UserFormView()
         {
             InitializeComponent();
             this.usersController = new UsersController();
-            this.userTypes = this.usersController.GetUserTypes();
 
             this.LoadUserTypes();
         }
 
-        private void LoadUserTypes()
+        private async void LoadUserTypes()
         {
+            this.userTypes = await this.usersController.GetUserTypes();
+
             this.roleCb.DisplayMember = "UserTypeName";
             this.roleCb.ValueMember = "Id";
             this.roleCb.DataSource = this.userTypes;
@@ -45,7 +46,7 @@ namespace ProyectoFinal_PED.Views
             GlobalState.LoadView(new UserManagementView());
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private async void btnAdd_Click(object sender, EventArgs e)
         {
             string username = this.userTxt.Text;
             string password = this.passwordTxt.Text;
@@ -65,7 +66,7 @@ namespace ProyectoFinal_PED.Views
 
             User user = new User(0, username, encryptedPassword, (int)role, "");
 
-            bool success = this.usersController.AddUser(user);
+            bool success = await this.usersController.AddUser(user);
 
             if (!success) return;
 

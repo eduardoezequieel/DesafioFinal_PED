@@ -43,6 +43,7 @@
             userTbl.Columns.AddRange(new DataGridViewColumn[] { username, rol });
             userTbl.Location = new Point(16, 117);
             userTbl.Name = "userTbl";
+            userTbl.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             userTbl.Size = new Size(986, 530);
             userTbl.TabIndex = 0;
             // 

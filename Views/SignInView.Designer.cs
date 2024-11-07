@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            textBox1 = new TextBox();
             panel3 = new Panel();
-            textBox2 = new TextBox();
+            passwordTxt = new TextBox();
             label2 = new Label();
             panel2 = new Panel();
+            usernameTxt = new TextBox();
             btnContinue = new Button();
             label1 = new Label();
             btnClose = new Button();
@@ -56,34 +56,25 @@
             panel1.Size = new Size(459, 310);
             panel1.TabIndex = 0;
             // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(247, 246, 244);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(10, 10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(378, 22);
-            textBox1.TabIndex = 0;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(247, 246, 244);
-            panel3.Controls.Add(textBox2);
+            panel3.Controls.Add(passwordTxt);
             panel3.Location = new Point(33, 152);
             panel3.Name = "panel3";
             panel3.Size = new Size(398, 42);
             panel3.TabIndex = 8;
             // 
-            // textBox2
+            // passwordTxt
             // 
-            textBox2.BackColor = Color.FromArgb(247, 246, 244);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(10, 10);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(378, 22);
-            textBox2.TabIndex = 0;
+            passwordTxt.BackColor = Color.FromArgb(247, 246, 244);
+            passwordTxt.BorderStyle = BorderStyle.None;
+            passwordTxt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordTxt.Location = new Point(10, 10);
+            passwordTxt.Name = "passwordTxt";
+            passwordTxt.PasswordChar = '*';
+            passwordTxt.Size = new Size(378, 22);
+            passwordTxt.TabIndex = 0;
             // 
             // label2
             // 
@@ -99,11 +90,21 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(247, 246, 244);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(usernameTxt);
             panel2.Location = new Point(33, 68);
             panel2.Name = "panel2";
             panel2.Size = new Size(398, 42);
             panel2.TabIndex = 6;
+            // 
+            // usernameTxt
+            // 
+            usernameTxt.BackColor = Color.FromArgb(247, 246, 244);
+            usernameTxt.BorderStyle = BorderStyle.None;
+            usernameTxt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usernameTxt.Location = new Point(10, 10);
+            usernameTxt.Name = "usernameTxt";
+            usernameTxt.Size = new Size(378, 22);
+            usernameTxt.TabIndex = 0;
             // 
             // btnContinue
             // 
@@ -189,9 +190,9 @@
         private Label label1;
         private Button btnContinue;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox usernameTxt;
         private Panel panel3;
-        private TextBox textBox2;
+        private TextBox passwordTxt;
         private Label label2;
         private Button btnClose;
         private Button btnMinimize;

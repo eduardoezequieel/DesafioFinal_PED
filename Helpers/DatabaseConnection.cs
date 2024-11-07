@@ -12,12 +12,12 @@ namespace ProyectoFinal_PED.Helpers
             this.connectionString = "Server=.,11433;TrustServerCertificate=True;Database=saborLocal;User=sa;Password=Admin123;MultipleActiveResultSets=True;";
         }
 
-        public SqlConnection GetConnection()
+        public async Task<SqlConnection> GetConnection()
         {
             try
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
-                connection.Open();
+                await connection.OpenAsync();
                 return connection;
             }
             catch (Exception ex)

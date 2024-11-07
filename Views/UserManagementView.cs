@@ -16,19 +16,19 @@ namespace ProyectoFinal_PED.Views
     public partial class UserManagementView : UserControl
     {
         private UsersController usersController;
-        private List<User> users;
+        private List<User> users = new List<User>();
 
         public UserManagementView()
         {
             InitializeComponent();
             this.usersController = new UsersController();
-            this.users = this.usersController.GetUsers();
 
             this.LoadUsers();
         }
 
-        private void LoadUsers()
+        private async void LoadUsers()
         {
+            this.users = await this.usersController.GetUsers();
             this.userTbl.Rows.Clear();
 
             foreach (User user in this.users)

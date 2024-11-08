@@ -6,6 +6,7 @@ namespace ProyectoFinal_PED.Helpers
     internal static class EncryptionHelper
     {
         private static readonly string Key = "PED_h@shkwnxks_a";
+        private static readonly string IV = "PED_h@sh";
 
         public static string Encrypt(string text)
         {
@@ -13,13 +14,13 @@ namespace ProyectoFinal_PED.Helpers
             {
                 using Aes aes = Aes.Create();
                 aes.Key = Encoding.UTF8.GetBytes(Key);
-                aes.IV = new byte[16];
+                aes.IV = Encoding.UTF8.GetBytes(IV);
 
                 using var encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
                 using var ms = new MemoryStream();
                 {
-                    var cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write);
-                    var sw = new StreamWriter(cs);
+                    using var cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write);
+                    using var sw = new StreamWriter(cs);
                     sw.Write(text);
                     return Convert.ToBase64String(ms.ToArray());
                 }

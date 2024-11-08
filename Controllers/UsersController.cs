@@ -37,8 +37,15 @@ namespace ProyectoFinal_PED.Controllers
                     var usernameFromDB = reader["usuario"];
                     var passwordFromDb = reader["contrasena"];
 
-                    //foundUser = new User(id, usernameFromDB, passwordFromDb, userType, "");
+                    foundUser = new User((int)id, (string)usernameFromDB, (string)passwordFromDb, (int)userType, "");
                 }   
+
+                if(foundUser == null)
+                {
+                    return (false, "Usuario no encontrado.");
+                }
+
+
 
             }
             catch (Exception ex)
@@ -101,7 +108,7 @@ namespace ProyectoFinal_PED.Controllers
                     var password = reader["contrasena"];
                     var userTypeName = reader["nombreTipoUsuario"];
 
-                    User user = new User((int)id, (string)username, (byte[])password, (int)userType, (string)userTypeName);
+                    User user = new User((int)id, (string)username, (string)password, (int)userType, (string)userTypeName);
 
                     this.users.Add(user);
                 }

@@ -36,6 +36,7 @@
             passwordTxt = new TextBox();
             label3 = new Label();
             panel3 = new Panel();
+            loadingSpinner = new Label();
             roleCb = new ComboBox();
             label4 = new Label();
             btnSubmit = new Button();
@@ -125,6 +126,15 @@
             panel3.Size = new Size(398, 42);
             panel3.TabIndex = 12;
             // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(353, 384);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 15;
+            loadingSpinner.Text = "Cargando...";
+            // 
             // roleCb
             // 
             roleCb.BackColor = Color.FromArgb(247, 246, 244);
@@ -184,6 +194,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(loadingSpinner);
             Controls.Add(btnBack);
             Controls.Add(btnSubmit);
             Controls.Add(panel3);
@@ -218,5 +229,6 @@
         private ComboBox roleCb;
         private Button btnSubmit;
         private Button btnBack;
+        private Label loadingSpinner;
     }
 }

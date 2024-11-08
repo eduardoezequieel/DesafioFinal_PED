@@ -14,7 +14,7 @@
         idUsuario INT IDENTITY(1,1) PRIMARY KEY,
         idTipoUsuario INT,
         usuario VARCHAR(50) NOT NULL,
-        contrasena VARBINARY(MAX) NOT NULL,
+        contrasena NVARCHAR(MAX) NOT NULL,
         CONSTRAINT fk_tipo_usuario FOREIGN KEY (idTipoUsuario) REFERENCES tipo_usuario(idTipoUsuario)
     );
     GO

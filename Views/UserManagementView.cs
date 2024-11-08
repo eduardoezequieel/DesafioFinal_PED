@@ -28,6 +28,7 @@ namespace ProyectoFinal_PED.Views
 
         private async void LoadUsers()
         {
+            this.ShowLoadingSpinner(true);
             this.users = await this.usersController.GetUsers();
             this.userTbl.Rows.Clear();
 
@@ -35,6 +36,14 @@ namespace ProyectoFinal_PED.Views
             {
                 this.userTbl.Rows.Add(user.GetUsername(), user.GetUserTypeName());
             }
+
+            this.ShowLoadingSpinner(false);
+        }
+
+        private void ShowLoadingSpinner(bool show)
+        {
+            loadingSpinner.Visible = show;
+            userTbl.Visible = !show;
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)

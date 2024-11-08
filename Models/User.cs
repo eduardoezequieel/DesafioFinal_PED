@@ -10,11 +10,11 @@ namespace ProyectoFinal_PED.Models
     {
         private int id;
         private string username;
-        private byte[] password;
+        private string password;
         private int userType;
         private string userTypeName;
 
-        public User(int id, string username, byte[] password, int userType, string userTypeName)
+        public User(int id, string username, string password, int userType, string userTypeName)
         {
             this.id = id;
             this.username = username;
@@ -33,7 +33,7 @@ namespace ProyectoFinal_PED.Models
             return this.username;
         }
 
-        public byte[] GetPassword()
+        public string GetPassword()
         {
             return this.password;
         }

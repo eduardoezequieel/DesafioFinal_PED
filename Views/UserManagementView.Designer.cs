@@ -33,11 +33,14 @@
             rol = new DataGridViewTextBoxColumn();
             label1 = new Label();
             btnAddUser = new Button();
+            loadingSpinner = new Label();
             ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
             SuspendLayout();
             // 
             // userTbl
             // 
+            userTbl.AllowUserToDeleteRows = false;
+            userTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             userTbl.BackgroundColor = Color.White;
             userTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             userTbl.Columns.AddRange(new DataGridViewColumn[] { username, rol });
@@ -52,14 +55,12 @@
             username.HeaderText = "Usuario";
             username.Name = "username";
             username.ReadOnly = true;
-            username.Width = 500;
             // 
             // rol
             // 
             rol.HeaderText = "Rol";
             rol.Name = "rol";
             rol.ReadOnly = true;
-            rol.Width = 500;
             // 
             // label1
             // 
@@ -87,11 +88,21 @@
             btnAddUser.UseVisualStyleBackColor = false;
             btnAddUser.Click += btnAddUser_Click;
             // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(477, 381);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 8;
+            loadingSpinner.Text = "Cargando...";
+            // 
             // UserManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(loadingSpinner);
             Controls.Add(btnAddUser);
             Controls.Add(label1);
             Controls.Add(userTbl);
@@ -109,5 +120,6 @@
         private Button btnAddUser;
         private DataGridViewTextBoxColumn username;
         private DataGridViewTextBoxColumn rol;
+        private Label loadingSpinner;
     }
 }

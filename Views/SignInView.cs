@@ -22,6 +22,15 @@ namespace ProyectoFinal_PED
             DashboardView dashboardView = new DashboardView();
             dashboardView.Show();
             this.Hide();
+
+            //string username = usernameTxt.Text;
+            //string password = passwordTxt.Text;
+
+            //if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+            //{
+            //    MessageBox.Show("Rellena todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
         }
     }
 }

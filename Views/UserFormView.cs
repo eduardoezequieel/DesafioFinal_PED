@@ -29,12 +29,20 @@ namespace ProyectoFinal_PED.Views
 
         private async void LoadUserTypes()
         {
+            this.ShowLoadingSpinner(true);
             this.userTypes = await this.usersController.GetUserTypes();
 
             this.roleCb.DisplayMember = "UserTypeName";
             this.roleCb.ValueMember = "Id";
             this.roleCb.DataSource = this.userTypes;
-        }   
+            this.ShowLoadingSpinner(false);
+        }
+
+        private void ShowLoadingSpinner(bool show)
+        {
+            loadingSpinner.Visible = show;
+            roleCb.Visible = !show;
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -58,11 +66,7 @@ namespace ProyectoFinal_PED.Views
                 return;
             }
 
-            byte[] encryptedPassword;
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                encryptedPassword = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            }
+            string encryptedPassword = EncryptionHelper.Encrypt(password);
 
             User user = new User(0, username, encryptedPassword, (int)role, "");
 
@@ -71,6 +75,10 @@ namespace ProyectoFinal_PED.Views
             if (!success) return;
 
             MessageBox.Show("Usuario añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            string decryptedPassword = EncryptionHelper.Decrypt(encryptedPassword);
+
+            MessageBox.Show($"Contraseña encriptada: {encryptedPassword}\nContraseña desencriptada: {decryptedPassword}", "Contraseñas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             GlobalState.LoadView(new UserManagementView());
         }

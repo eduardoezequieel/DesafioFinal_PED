@@ -21,7 +21,7 @@ namespace ProyectoFinal_PED
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private async void btnContinue_Click(object sender, EventArgs e)
+        private async void SignIn()
         {
             string username = usernameTxt.Text;
             string password = passwordTxt.Text;
@@ -43,6 +43,19 @@ namespace ProyectoFinal_PED
             DashboardView dashboardView = new DashboardView();
             dashboardView.Show();
             this.Hide();
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            this.SignIn();
+        }
+
+        private void passwordTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                this.SignIn();
+            }
         }
     }
 }

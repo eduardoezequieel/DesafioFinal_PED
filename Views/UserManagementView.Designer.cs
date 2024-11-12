@@ -29,38 +29,35 @@
         private void InitializeComponent()
         {
             userTbl = new DataGridView();
-            username = new DataGridViewTextBoxColumn();
-            rol = new DataGridViewTextBoxColumn();
             label1 = new Label();
             btnAddUser = new Button();
             loadingSpinner = new Label();
+            id = new DataGridViewTextBoxColumn();
+            username = new DataGridViewTextBoxColumn();
+            rol = new DataGridViewTextBoxColumn();
+            updateBtn = new DataGridViewButtonColumn();
+            deleteBtn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
             SuspendLayout();
             // 
             // userTbl
             // 
+            userTbl.AllowUserToAddRows = false;
             userTbl.AllowUserToDeleteRows = false;
+            userTbl.AllowUserToResizeColumns = false;
+            userTbl.AllowUserToResizeRows = false;
             userTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             userTbl.BackgroundColor = Color.White;
             userTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userTbl.Columns.AddRange(new DataGridViewColumn[] { username, rol });
+            userTbl.Columns.AddRange(new DataGridViewColumn[] { id, username, rol, updateBtn, deleteBtn });
             userTbl.Location = new Point(16, 117);
+            userTbl.MultiSelect = false;
             userTbl.Name = "userTbl";
-            userTbl.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            userTbl.ReadOnly = true;
+            userTbl.RowHeadersVisible = false;
             userTbl.Size = new Size(986, 530);
             userTbl.TabIndex = 0;
-            // 
-            // username
-            // 
-            username.HeaderText = "Usuario";
-            username.Name = "username";
-            username.ReadOnly = true;
-            // 
-            // rol
-            // 
-            rol.HeaderText = "Rol";
-            rol.Name = "rol";
-            rol.ReadOnly = true;
+            userTbl.CellContentClick += userTbl_CellContentClick;
             // 
             // label1
             // 
@@ -97,6 +94,48 @@
             loadingSpinner.TabIndex = 8;
             loadingSpinner.Text = "Cargando...";
             // 
+            // id
+            // 
+            id.HeaderText = "Id";
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Visible = false;
+            // 
+            // username
+            // 
+            username.FillWeight = 139.231308F;
+            username.HeaderText = "Usuario";
+            username.Name = "username";
+            username.ReadOnly = true;
+            // 
+            // rol
+            // 
+            rol.FillWeight = 139.231308F;
+            rol.HeaderText = "Rol";
+            rol.Name = "rol";
+            rol.ReadOnly = true;
+            // 
+            // updateBtn
+            // 
+            updateBtn.FillWeight = 60.62371F;
+            updateBtn.HeaderText = "Editar";
+            updateBtn.Name = "updateBtn";
+            updateBtn.ReadOnly = true;
+            updateBtn.Text = "Editar";
+            updateBtn.ToolTipText = "Editar";
+            updateBtn.UseColumnTextForButtonValue = true;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.FillWeight = 60.9137039F;
+            deleteBtn.HeaderText = "Eliminar";
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.ReadOnly = true;
+            deleteBtn.Resizable = DataGridViewTriState.True;
+            deleteBtn.Text = "Eliminar";
+            deleteBtn.ToolTipText = "Eliminar";
+            deleteBtn.UseColumnTextForButtonValue = true;
+            // 
             // UserManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -118,8 +157,11 @@
         private DataGridView userTbl;        
         private Label label1;
         private Button btnAddUser;
+        private Label loadingSpinner;
+        private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn username;
         private DataGridViewTextBoxColumn rol;
-        private Label loadingSpinner;
+        private DataGridViewButtonColumn updateBtn;
+        private DataGridViewButtonColumn deleteBtn;
     }
 }

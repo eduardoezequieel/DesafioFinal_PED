@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_PED.Models
 {
-    internal class UserType
+    public class UserType
     {
         private int id;
         private string userTypeName;

@@ -4,14 +4,14 @@ using ProyectoFinal_PED.Models;
 
 namespace ProyectoFinal_PED.Controllers
 {
-    internal class UsersController
+    public class UsersController
     {
-        private List<User> users;
+        private Dictionary<int, User> users;
         private List<UserType> userTypes;
 
         public UsersController()
         {
-            this.users = new List<User>();
+            this.users = new Dictionary<int, User>();
             this.userTypes = new List<UserType>();
         }
 
@@ -66,7 +66,35 @@ namespace ProyectoFinal_PED.Controllers
             }            
         }
 
-        public async Task<bool> AddUser(User user)
+        public async Task<(bool result, string message)> DeleteUser(int id)
+        {
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = await connection.GetConnection();
+
+            string query = "DELETE FROM usuario WHERE idUsuario = @id";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.AddWithValue("@id", id);
+
+                int result = await command.ExecuteNonQueryAsync();
+
+                if(result == 0) return(false, "No se pudo eliminar el usuario.");
+
+                return (true, "Usuario eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return (false, $"Error al eliminar el usuario: {ex.Message}");
+            }
+            finally
+            {
+                await cn.CloseAsync();
+            }
+        }
+
+        public async Task<(bool result, string message)> AddUser(User user)
         {
             DatabaseConnection connection = new DatabaseConnection();
             SqlConnection cn = await connection.GetConnection();
@@ -81,12 +109,13 @@ namespace ProyectoFinal_PED.Controllers
 
                 int result = await command.ExecuteNonQueryAsync();
 
-                return result > 0;
+                if (result == 0) return (false, "No se pudo insertar el usuario.");
+
+                return (true, "Usuario insertado correctamente.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al ejecutar la inserción: " + ex.Message);
-                return false;
+                return (false, $"Error al insertar el usuario: {ex.Message}");
             }
             finally
             {
@@ -94,8 +123,39 @@ namespace ProyectoFinal_PED.Controllers
             }
         }
 
-        public async Task<List<User>> GetUsers()
+        public async Task<(bool result, string message)> UpdateUser(int id, User user)
         {
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = await connection.GetConnection();
+            string query = "UPDATE usuario SET idTipoUsuario = @userType, usuario = @username, contrasena = @password WHERE idUsuario = @id";            
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.AddWithValue("@password", user.GetPassword());
+                command.Parameters.AddWithValue("@username", user.GetUsername());
+                command.Parameters.AddWithValue("@userType", user.GetUserType());
+                command.Parameters.AddWithValue("@id", id);
+
+                int result = await command.ExecuteNonQueryAsync();
+
+                if(result == 0) return (false, "No se pudo actualizar el usuario.");
+
+                return (true, "Usuario actualizado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return (false, $"Error al actualizar el usuario: {ex.Message}");
+            }
+            finally
+            {
+                await cn.CloseAsync();
+            }
+        }
+
+        public async Task<Dictionary<int, User>> GetUsers()
+        {
+            this.users.Clear();
             DatabaseConnection connection = new DatabaseConnection();
             SqlConnection cn = await connection.GetConnection();
 
@@ -116,7 +176,7 @@ namespace ProyectoFinal_PED.Controllers
 
                     User user = new User((int)id, (string)username, (string)password, (int)userType, (string)userTypeName);
 
-                    this.users.Add(user);
+                    this.users.Add(user.GetId(), user);
                 }
 
                 await reader.CloseAsync();
@@ -135,6 +195,7 @@ namespace ProyectoFinal_PED.Controllers
 
         public async Task<List<UserType>> GetUserTypes()
         {
+            this.userTypes = new List<UserType>();
             DatabaseConnection connection = new DatabaseConnection();
             SqlConnection cn = await connection.GetConnection();
 

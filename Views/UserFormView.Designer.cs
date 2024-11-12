@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            titleLbl = new Label();
             panel2 = new Panel();
             userTxt = new TextBox();
             label2 = new Label();
             panel1 = new Panel();
             passwordTxt = new TextBox();
-            label3 = new Label();
+            passwordLbl = new Label();
             panel3 = new Panel();
-            loadingSpinner = new Label();
             roleCb = new ComboBox();
+            loadingSpinner = new Label();
             label4 = new Label();
             btnSubmit = new Button();
             btnBack = new Button();
@@ -46,16 +46,16 @@
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // titleLbl
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(8, 51, 83);
-            label1.Location = new Point(24, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(146, 25);
-            label1.TabIndex = 1;
-            label1.Text = "Agregar usuario";
+            titleLbl.AutoSize = true;
+            titleLbl.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            titleLbl.ForeColor = Color.FromArgb(8, 51, 83);
+            titleLbl.Location = new Point(24, 22);
+            titleLbl.Name = "titleLbl";
+            titleLbl.Size = new Size(146, 25);
+            titleLbl.TabIndex = 1;
+            titleLbl.Text = "Agregar usuario";
             // 
             // panel2
             // 
@@ -106,16 +106,16 @@
             passwordTxt.Size = new Size(378, 22);
             passwordTxt.TabIndex = 0;
             // 
-            // label3
+            // passwordLbl
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(8, 51, 83);
-            label3.Location = new Point(317, 289);
-            label3.Name = "label3";
-            label3.Size = new Size(106, 25);
-            label3.TabIndex = 9;
-            label3.Text = "Contraseña";
+            passwordLbl.AutoSize = true;
+            passwordLbl.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            passwordLbl.ForeColor = Color.FromArgb(8, 51, 83);
+            passwordLbl.Location = new Point(317, 289);
+            passwordLbl.Name = "passwordLbl";
+            passwordLbl.Size = new Size(106, 25);
+            passwordLbl.TabIndex = 9;
+            passwordLbl.Text = "Contraseña";
             // 
             // panel3
             // 
@@ -125,15 +125,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(398, 42);
             panel3.TabIndex = 12;
-            // 
-            // loadingSpinner
-            // 
-            loadingSpinner.AutoSize = true;
-            loadingSpinner.Location = new Point(353, 384);
-            loadingSpinner.Name = "loadingSpinner";
-            loadingSpinner.Size = new Size(68, 15);
-            loadingSpinner.TabIndex = 15;
-            loadingSpinner.Text = "Cargando...";
             // 
             // roleCb
             // 
@@ -146,6 +137,15 @@
             roleCb.Name = "roleCb";
             roleCb.Size = new Size(382, 29);
             roleCb.TabIndex = 13;
+            // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(353, 384);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 15;
+            loadingSpinner.Text = "Cargando...";
             // 
             // label4
             // 
@@ -200,10 +200,10 @@
             Controls.Add(panel3);
             Controls.Add(label4);
             Controls.Add(panel1);
-            Controls.Add(label3);
+            Controls.Add(passwordLbl);
             Controls.Add(panel2);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(titleLbl);
             Name = "UserFormView";
             Size = new Size(1019, 663);
             panel2.ResumeLayout(false);
@@ -217,13 +217,13 @@
 
         #endregion
 
-        private Label label1;
+        private Label titleLbl;
         private Panel panel2;
         private TextBox userTxt;
         private Label label2;
         private Panel panel1;
         private TextBox passwordTxt;
-        private Label label3;
+        private Label passwordLbl;
         private Panel panel3;
         private Label label4;
         private ComboBox roleCb;

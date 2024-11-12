@@ -11,6 +11,13 @@ namespace ProyectoFinal_PED
 
             GlobalState.SetPanelContainer(panelContainer);
             GlobalState.LoadView(new HomeView());
+
+            this.LoadUsers();
+        }
+
+        private void LoadUsers()
+        {
+            this.userLbl.Text = GlobalState.GetCurrentUser().GetUsername();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

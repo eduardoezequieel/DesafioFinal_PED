@@ -8,8 +8,8 @@ namespace ProyectoFinal_PED.Helpers
         
         public DatabaseConnection()
         {
-            //this.connectionString = "Server=localhost;Database=saborLocal;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
-            this.connectionString = "Server=.,11433;TrustServerCertificate=True;Database=saborLocal;User=sa;Password=Admin123;MultipleActiveResultSets=True;";
+            this.connectionString = "Server=localhost;Database=saborLocal;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
+            //this.connectionString = "Server=.,11433;TrustServerCertificate=True;Database=saborLocal;User=sa;Password=Admin123;MultipleActiveResultSets=True;";
         }
 
         public async Task<SqlConnection> GetConnection()

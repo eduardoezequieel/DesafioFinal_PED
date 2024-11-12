@@ -76,10 +76,6 @@ namespace ProyectoFinal_PED.Views
 
             MessageBox.Show("Usuario añadido correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            string decryptedPassword = EncryptionHelper.Decrypt(encryptedPassword);
-
-            MessageBox.Show($"Contraseña encriptada: {encryptedPassword}\nContraseña desencriptada: {decryptedPassword}", "Contraseñas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             GlobalState.LoadView(new UserManagementView());
         }
     }

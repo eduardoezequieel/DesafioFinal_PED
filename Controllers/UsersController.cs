@@ -27,7 +27,7 @@ namespace ProyectoFinal_PED.Controllers
                 SqlCommand command = new SqlCommand(query, cn);
                 command.Parameters.AddWithValue("@username", username);
 
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
                 User foundUser = null;
 
@@ -45,19 +45,25 @@ namespace ProyectoFinal_PED.Controllers
                     return (false, "Usuario no encontrado.");
                 }
 
+                string decryptedPassword = EncryptionHelper.Decrypt(foundUser.GetPassword());
 
+                if (decryptedPassword != password) 
+                { 
+                    return (false, "Contraseña incorrecta.");
+                }
 
+                GlobalState.SetCurrentUser(foundUser);
+
+                return (true, "Inicio de sesión exitoso.");
             }
             catch (Exception ex)
             {
-
+                return (false, "Error al iniciar sesión. " + ex.Message);
             }
             finally
             {
-                cn.Close();
-            }
-
-            return (true, "message");
+                await cn.CloseAsync();
+            }            
         }
 
         public async Task<bool> AddUser(User user)

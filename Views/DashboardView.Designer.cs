@@ -31,6 +31,7 @@
             btnClose = new Button();
             btnMinimize = new Button();
             panel1 = new Panel();
+            userLbl = new Label();
             btnInvoices = new Button();
             btnOrders = new Button();
             btnReservas = new Button();
@@ -39,7 +40,6 @@
             btnHome = new Button();
             btnUsers = new Button();
             panelContainer = new Panel();
-            userLbl = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,6 +89,17 @@
             panel1.Size = new Size(229, 724);
             panel1.TabIndex = 11;
             // 
+            // userLbl
+            // 
+            userLbl.AutoSize = true;
+            userLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            userLbl.ForeColor = Color.White;
+            userLbl.Location = new Point(14, 15);
+            userLbl.Name = "userLbl";
+            userLbl.Size = new Size(65, 21);
+            userLbl.TabIndex = 21;
+            userLbl.Text = "Usuario";
+            // 
             // btnInvoices
             // 
             btnInvoices.BackColor = Color.FromArgb(255, 109, 72);
@@ -134,6 +145,7 @@
             btnReservas.TabIndex = 18;
             btnReservas.Text = "Reservas";
             btnReservas.UseVisualStyleBackColor = false;
+            btnReservas.Click += btnReservas_Click;
             // 
             // btnMesas
             // 
@@ -204,17 +216,6 @@
             panelContainer.Size = new Size(1019, 663);
             panelContainer.TabIndex = 12;
             panelContainer.Paint += d;
-            // 
-            // userLbl
-            // 
-            userLbl.AutoSize = true;
-            userLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            userLbl.ForeColor = Color.White;
-            userLbl.Location = new Point(14, 15);
-            userLbl.Name = "userLbl";
-            userLbl.Size = new Size(65, 21);
-            userLbl.TabIndex = 21;
-            userLbl.Text = "Usuario";
             // 
             // DashboardView
             // 

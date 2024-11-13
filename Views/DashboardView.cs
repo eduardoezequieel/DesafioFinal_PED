@@ -59,5 +59,10 @@ namespace ProyectoFinal_PED
         {
             GlobalState.LoadView(new InvoiceManagementView());
         }
+
+        private void btnReservas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

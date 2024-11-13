@@ -7,6 +7,9 @@
     <Compile Update="Views\AddMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\CustomerBookingManagementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\MenuView.cs">
       <SubType>UserControl</SubType>
     </Compile>

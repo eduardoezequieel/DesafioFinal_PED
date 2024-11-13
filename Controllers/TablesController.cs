@@ -1,10 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using ProyectoFinal_PED.Helpers;
 using ProyectoFinal_PED.Models;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProyectoFinal_PED.Controllers
 {

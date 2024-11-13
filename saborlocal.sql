@@ -97,3 +97,5 @@
 
     INSERT INTO tipo_usuario(nombreTipoUsuario) VALUES ('Administrador');
     INSERT INTO usuario(idTipoUsuario, usuario, contrasena) VALUES (1, 'admin', 'HrE4PPDP3lAAShHArhTdCQ==');
+
+    INSERT INTO estado_reserva(nombreEstadoReserva) VALUES ('Pendiente'), ('Activa'), ('Cancelada'), ('Finalizada');

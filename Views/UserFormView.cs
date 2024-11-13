@@ -16,7 +16,7 @@ namespace ProyectoFinal_PED.Views
             this.usersController = new UsersController();
             this.LoadUserTypes();
 
-            if(user != null)
+            if (user != null)
             {
                 this.titleLbl.Text = "Actualizar usuario";
                 this.passwordLbl.Text = "Nueva contraseña si es necesario";
@@ -71,7 +71,8 @@ namespace ProyectoFinal_PED.Views
 
             (bool result, string message) = await this.usersController.AddUser(user);
 
-            if (!result) { 
+            if (!result)
+            {
                 MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             };
@@ -97,7 +98,7 @@ namespace ProyectoFinal_PED.Views
 
             User user = null;
 
-            if(string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(password))
             {
                 user = new User(userToBeUpdated.GetId(), username, userToBeUpdated.GetPassword(), (int)role, "");
             }
@@ -108,7 +109,8 @@ namespace ProyectoFinal_PED.Views
 
             (bool result, string message) = await this.usersController.UpdateUser(user.GetId(), user);
 
-            if (!result) { 
+            if (!result)
+            {
                 MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             };
@@ -121,9 +123,9 @@ namespace ProyectoFinal_PED.Views
         private void btnAdd_Click(object sender, EventArgs e)
         {
             bool createMode = true;
-            if(userToBeUpdated != null) createMode = false;
+            if (userToBeUpdated != null) createMode = false;
 
-            if(createMode)
+            if (createMode)
             {
                 this.createUser();
                 return;
@@ -131,5 +133,7 @@ namespace ProyectoFinal_PED.Views
 
             this.updateUser();
         }
+
+        
     }
 }

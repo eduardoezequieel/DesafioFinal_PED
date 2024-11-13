@@ -146,6 +146,7 @@
             btnAdd.TabIndex = 17;
             btnAdd.Text = "Guardar cambios";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // TableFormView
             // 
@@ -161,6 +162,7 @@
             Controls.Add(tableAddLbl);
             Name = "TableFormView";
             Size = new Size(1019, 663);
+            Load += TableFormView_Load;
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

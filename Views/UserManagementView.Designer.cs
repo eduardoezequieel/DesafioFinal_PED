@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             userTbl = new DataGridView();
-            label1 = new Label();
-            btnAddUser = new Button();
-            loadingSpinner = new Label();
             id = new DataGridViewTextBoxColumn();
             username = new DataGridViewTextBoxColumn();
             rol = new DataGridViewTextBoxColumn();
             updateBtn = new DataGridViewButtonColumn();
             deleteBtn = new DataGridViewButtonColumn();
+            label1 = new Label();
+            btnAddUser = new Button();
+            loadingSpinner = new Label();
             ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
             SuspendLayout();
             // 
@@ -58,41 +58,6 @@
             userTbl.Size = new Size(986, 530);
             userTbl.TabIndex = 0;
             userTbl.CellContentClick += userTbl_CellContentClick;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(8, 51, 83);
-            label1.Location = new Point(24, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(173, 25);
-            label1.TabIndex = 6;
-            label1.Text = "Listado de usuarios";
-            // 
-            // btnAddUser
-            // 
-            btnAddUser.BackColor = Color.FromArgb(250, 125, 95);
-            btnAddUser.FlatAppearance.BorderSize = 0;
-            btnAddUser.FlatStyle = FlatStyle.Flat;
-            btnAddUser.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddUser.ForeColor = SystemColors.ButtonHighlight;
-            btnAddUser.Location = new Point(839, 53);
-            btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(163, 45);
-            btnAddUser.TabIndex = 7;
-            btnAddUser.Text = "Agregar";
-            btnAddUser.UseVisualStyleBackColor = false;
-            btnAddUser.Click += btnAddUser_Click;
-            // 
-            // loadingSpinner
-            // 
-            loadingSpinner.AutoSize = true;
-            loadingSpinner.Location = new Point(477, 381);
-            loadingSpinner.Name = "loadingSpinner";
-            loadingSpinner.Size = new Size(68, 15);
-            loadingSpinner.TabIndex = 8;
-            loadingSpinner.Text = "Cargando...";
             // 
             // id
             // 
@@ -135,6 +100,41 @@
             deleteBtn.Text = "Eliminar";
             deleteBtn.ToolTipText = "Eliminar";
             deleteBtn.UseColumnTextForButtonValue = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(8, 51, 83);
+            label1.Location = new Point(24, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(173, 25);
+            label1.TabIndex = 6;
+            label1.Text = "Listado de usuarios";
+            // 
+            // btnAddUser
+            // 
+            btnAddUser.BackColor = Color.FromArgb(250, 125, 95);
+            btnAddUser.FlatAppearance.BorderSize = 0;
+            btnAddUser.FlatStyle = FlatStyle.Flat;
+            btnAddUser.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddUser.ForeColor = SystemColors.ButtonHighlight;
+            btnAddUser.Location = new Point(839, 53);
+            btnAddUser.Name = "btnAddUser";
+            btnAddUser.Size = new Size(163, 45);
+            btnAddUser.TabIndex = 7;
+            btnAddUser.Text = "Agregar";
+            btnAddUser.UseVisualStyleBackColor = false;
+            btnAddUser.Click += btnAddUser_Click;
+            // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(477, 381);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 8;
+            loadingSpinner.Text = "Cargando...";
             // 
             // UserManagementView
             // 

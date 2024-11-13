@@ -51,7 +51,6 @@
             titleLbl.Size = new Size(358, 25);
             titleLbl.TabIndex = 2;
             titleLbl.Text = "Consultar disponibilidad para reservación";
-            titleLbl.Click += this.titleLbl_Click;
             // 
             // dateTimePicker1
             // 

@@ -57,7 +57,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(8, 51, 83);
-            label2.Location = new Point(310, 200);
+            label2.Location = new Point(310, 225);
             label2.Name = "label2";
             label2.Size = new Size(171, 25);
             label2.TabIndex = 9;
@@ -67,7 +67,7 @@
             // 
             panel3.BackColor = Color.FromArgb(247, 246, 244);
             panel3.Controls.Add(CapacityComboBox);
-            panel3.Location = new Point(310, 237);
+            panel3.Location = new Point(310, 262);
             panel3.Name = "panel3";
             panel3.Size = new Size(398, 42);
             panel3.TabIndex = 13;
@@ -89,9 +89,9 @@
             // 
             panel2.BackColor = Color.FromArgb(247, 246, 244);
             panel2.Controls.Add(notesTxt);
-            panel2.Location = new Point(316, 393);
+            panel2.Location = new Point(312, 357);
             panel2.Name = "panel2";
-            panel2.Size = new Size(398, 42);
+            panel2.Size = new Size(398, 89);
             panel2.TabIndex = 15;
             // 
             // notesTxt
@@ -102,7 +102,7 @@
             notesTxt.Location = new Point(10, 10);
             notesTxt.Multiline = true;
             notesTxt.Name = "notesTxt";
-            notesTxt.Size = new Size(378, 23);
+            notesTxt.Size = new Size(378, 67);
             notesTxt.TabIndex = 0;
             notesTxt.TextChanged += textBox1_TextChanged;
             // 
@@ -111,7 +111,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(8, 51, 83);
-            label1.Location = new Point(319, 361);
+            label1.Location = new Point(315, 325);
             label1.Name = "label1";
             label1.Size = new Size(243, 25);
             label1.TabIndex = 14;
@@ -146,6 +146,7 @@
             btnAdd.TabIndex = 17;
             btnAdd.Text = "Guardar cambios";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // TableFormView
             // 
@@ -161,6 +162,7 @@
             Controls.Add(tableAddLbl);
             Name = "TableFormView";
             Size = new Size(1019, 663);
+            Load += TableFormView_Load;
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

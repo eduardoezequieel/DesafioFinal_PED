@@ -28,42 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableTbl = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             tableLbl = new Label();
             btnAddTable = new Button();
+            tableTbl = new DataGridView();
+            idMesa = new DataGridViewTextBoxColumn();
+            capacidad = new DataGridViewTextBoxColumn();
+            notas = new DataGridViewTextBoxColumn();
+            updateBtn = new DataGridViewButtonColumn();
+            deleteBtn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)tableTbl).BeginInit();
             SuspendLayout();
-            // 
-            // tableTbl
-            // 
-            tableTbl.BackgroundColor = Color.White;
-            tableTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tableTbl.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            tableTbl.Location = new Point(40, 94);
-            tableTbl.Name = "tableTbl";
-            tableTbl.Size = new Size(944, 530);
-            tableTbl.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Mesa ID";
-            Column1.Name = "Column1";
-            Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Capacidad";
-            Column2.Name = "Column2";
-            Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Notas";
-            Column3.Name = "Column3";
-            Column3.Width = 500;
             // 
             // tableLbl
             // 
@@ -91,27 +65,89 @@
             btnAddTable.UseVisualStyleBackColor = false;
             btnAddTable.Click += btnAddTable_Click;
             // 
+            // tableTbl
+            // 
+            tableTbl.AllowUserToAddRows = false;
+            tableTbl.AllowUserToDeleteRows = false;
+            tableTbl.AllowUserToResizeColumns = false;
+            tableTbl.AllowUserToResizeRows = false;
+            tableTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tableTbl.BackgroundColor = Color.White;
+            tableTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableTbl.Columns.AddRange(new DataGridViewColumn[] { idMesa, capacidad, notas, updateBtn, deleteBtn });
+            tableTbl.Location = new Point(15, 89);
+            tableTbl.MultiSelect = false;
+            tableTbl.Name = "tableTbl";
+            tableTbl.ReadOnly = true;
+            tableTbl.RowHeadersVisible = false;
+            tableTbl.Size = new Size(986, 530);
+            tableTbl.TabIndex = 9;
+            tableTbl.CellContentClick += tableTbl_CellContentClick_1;
+            // 
+            // idMesa
+            // 
+            idMesa.HeaderText = "Mesa ID";
+            idMesa.Name = "idMesa";
+            idMesa.ReadOnly = true;
+            // 
+            // capacidad
+            // 
+            capacidad.FillWeight = 139.231308F;
+            capacidad.HeaderText = "Capacidad";
+            capacidad.Name = "capacidad";
+            capacidad.ReadOnly = true;
+            // 
+            // notas
+            // 
+            notas.FillWeight = 139.231308F;
+            notas.HeaderText = "Notas";
+            notas.Name = "notas";
+            notas.ReadOnly = true;
+            // 
+            // updateBtn
+            // 
+            updateBtn.FillWeight = 60.62371F;
+            updateBtn.HeaderText = "Editar";
+            updateBtn.Name = "updateBtn";
+            updateBtn.ReadOnly = true;
+            updateBtn.Text = "Editar";
+            updateBtn.ToolTipText = "Editar";
+            updateBtn.UseColumnTextForButtonValue = true;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.FillWeight = 60.9137039F;
+            deleteBtn.HeaderText = "Eliminar";
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.ReadOnly = true;
+            deleteBtn.Resizable = DataGridViewTriState.True;
+            deleteBtn.Text = "Eliminar";
+            deleteBtn.ToolTipText = "Eliminar";
+            deleteBtn.UseColumnTextForButtonValue = true;
+            // 
             // TableManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(tableTbl);
             Controls.Add(btnAddTable);
             Controls.Add(tableLbl);
-            Controls.Add(tableTbl);
             Name = "TableManagementView";
             Size = new Size(1019, 663);
+            Load += TableManagementView_Load;
             ((System.ComponentModel.ISupportInitialize)tableTbl).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView tableTbl;
         private Label tableLbl;
         private Button btnAddTable;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
+        private DataGridView tableTbl;
+        private DataGridViewTextBoxColumn idMesa;
+        private DataGridViewTextBoxColumn capacidad;
+        private DataGridViewTextBoxColumn notas;
+        private DataGridViewButtonColumn updateBtn;
+        private DataGridViewButtonColumn deleteBtn;
     }
 }

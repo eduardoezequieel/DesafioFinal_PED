@@ -82,13 +82,14 @@ namespace ProyectoFinal_PED.Views
                 var userId = userTbl.Rows[e.RowIndex].Cells["id"].Value;
                 User user = users[(int)userId];
 
-                if(user.GetId() == GlobalState.GetCurrentUser().GetId())
+                if (user.GetId() == GlobalState.GetCurrentUser().GetId())
                 {
                     MessageBox.Show("No se puede eliminar al usuario que tiene la sesión actual.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                if (user.GetUsername() == "admin") { 
+                if (user.GetUsername() == "admin")
+                {
                     MessageBox.Show("No se puede eliminar al usuario administrador.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
@@ -98,11 +99,11 @@ namespace ProyectoFinal_PED.Views
                                              MessageBoxButtons.YesNo,
                                              MessageBoxIcon.Question);
 
-                if(confirmResult == DialogResult.Yes)
+                if (confirmResult == DialogResult.Yes)
                 {
                     (bool result, string message) = await this.usersController.DeleteUser(user.GetId());
 
-                    if(result == false)
+                    if (result == false)
                     {
                         MessageBox.Show(message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -113,5 +114,7 @@ namespace ProyectoFinal_PED.Views
                 return;
             }
         }
+
+        
     }
 }

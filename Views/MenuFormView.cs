@@ -47,5 +47,10 @@ namespace ProyectoFinal_PED.Views
         {
             SaveMenu();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new MenuManagementView());
+        }
     }
 }

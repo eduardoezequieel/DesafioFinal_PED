@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            numericUpDownPrice = new NumericUpDown();
             btnBack = new Button();
             btnSubmit = new Button();
-            panel1 = new Panel();
             passwordLbl = new Label();
             panel2 = new Panel();
             productTxt = new TextBox();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).BeginInit();
-            panel1.SuspendLayout();
+            panel1 = new Panel();
+            textBoxPrecio = new TextBox();
             panel2.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -52,20 +51,6 @@
             label1.Size = new Size(161, 25);
             label1.TabIndex = 12;
             label1.Text = "Agregar Producto";
-            // 
-            // numericUpDownPrice
-            // 
-            numericUpDownPrice.DecimalPlaces = 2;
-            numericUpDownPrice.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            numericUpDownPrice.Location = new Point(10, 11);
-            numericUpDownPrice.Maximum = new decimal(new int[] { 9999, 0, 0, 131072 });
-            numericUpDownPrice.Minimum = new decimal(new int[] { 100, 0, 0, 131072 });
-            numericUpDownPrice.Name = "numericUpDownPrice";
-            numericUpDownPrice.Size = new Size(382, 33);
-            numericUpDownPrice.TabIndex = 13;
-            numericUpDownPrice.Tag = "";
-            numericUpDownPrice.Value = new decimal(new int[] { 100, 0, 0, 131072 });
-            numericUpDownPrice.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // btnBack
             // 
@@ -80,6 +65,7 @@
             btnBack.TabIndex = 23;
             btnBack.Text = "Regresar";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // btnSubmit
             // 
@@ -94,15 +80,6 @@
             btnSubmit.TabIndex = 22;
             btnSubmit.Text = "Guardar cambios";
             btnSubmit.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(247, 246, 244);
-            panel1.Controls.Add(numericUpDownPrice);
-            panel1.Location = new Point(275, 331);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(398, 55);
-            panel1.TabIndex = 19;
             // 
             // passwordLbl
             // 
@@ -145,24 +122,43 @@
             label2.TabIndex = 16;
             label2.Text = "Nombre del Producto";
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(247, 246, 244);
+            panel1.Controls.Add(textBoxPrecio);
+            panel1.Location = new Point(278, 327);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(398, 42);
+            panel1.TabIndex = 24;
+            // 
+            // textBoxPrecio
+            // 
+            textBoxPrecio.BackColor = Color.FromArgb(247, 246, 244);
+            textBoxPrecio.BorderStyle = BorderStyle.None;
+            textBoxPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxPrecio.Location = new Point(8, 11);
+            textBoxPrecio.Name = "textBoxPrecio";
+            textBoxPrecio.Size = new Size(378, 22);
+            textBoxPrecio.TabIndex = 0;
+            // 
             // DishFormView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(panel1);
             Controls.Add(btnBack);
             Controls.Add(btnSubmit);
-            Controls.Add(panel1);
             Controls.Add(passwordLbl);
             Controls.Add(panel2);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "DishFormView";
             Size = new Size(1019, 663);
-            ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).EndInit();
-            panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -170,13 +166,13 @@
         #endregion
 
         private Label label1;
-        private NumericUpDown numericUpDownPrice;
         private Button btnBack;
         private Button btnSubmit;
-        private Panel panel1;
         private Label passwordLbl;
         private Panel panel2;
         private TextBox productTxt;
         private Label label2;
+        private Panel panel1;
+        private TextBox textBoxPrecio;
     }
 }

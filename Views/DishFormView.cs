@@ -21,5 +21,23 @@ namespace ProyectoFinal_PED.Views
         {
 
         }
+
+        private void textBoxPrecio_Leave(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(textBoxPrecio.Text, out decimal precio))
+            {
+                textBoxPrecio.Text = precio.ToString("C2");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingresa un valor válido.");
+                textBoxPrecio.Focus();
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

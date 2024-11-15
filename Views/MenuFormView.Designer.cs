@@ -61,6 +61,7 @@
             btnBack.TabIndex = 18;
             btnBack.Text = "Regresar";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // btnSubmit
             // 

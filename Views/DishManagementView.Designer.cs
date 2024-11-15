@@ -30,14 +30,15 @@
         {
             btnAddUser = new Button();
             MenuLbl = new Label();
-            userTbl = new DataGridView();
+            dishTbl = new DataGridView();
             IdMenu = new DataGridViewTextBoxColumn();
             idProducto = new DataGridViewTextBoxColumn();
             productName = new DataGridViewTextBoxColumn();
             precio = new DataGridViewTextBoxColumn();
             updateBtn = new DataGridViewButtonColumn();
             deleteBtn = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
+            btnBackMenu = new Button();
+            ((System.ComponentModel.ISupportInitialize)dishTbl).BeginInit();
             SuspendLayout();
             // 
             // btnAddUser
@@ -53,6 +54,7 @@
             btnAddUser.TabIndex = 10;
             btnAddUser.Text = "Agregar";
             btnAddUser.UseVisualStyleBackColor = false;
+            btnAddUser.Click += btnAddUser_Click;
             // 
             // MenuLbl
             // 
@@ -65,23 +67,23 @@
             MenuLbl.TabIndex = 9;
             MenuLbl.Text = "Menú Seleccionado :";
             // 
-            // userTbl
+            // dishTbl
             // 
-            userTbl.AllowUserToAddRows = false;
-            userTbl.AllowUserToDeleteRows = false;
-            userTbl.AllowUserToResizeColumns = false;
-            userTbl.AllowUserToResizeRows = false;
-            userTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            userTbl.BackgroundColor = Color.White;
-            userTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userTbl.Columns.AddRange(new DataGridViewColumn[] { IdMenu, idProducto, productName, precio, updateBtn, deleteBtn });
-            userTbl.Location = new Point(16, 114);
-            userTbl.MultiSelect = false;
-            userTbl.Name = "userTbl";
-            userTbl.ReadOnly = true;
-            userTbl.RowHeadersVisible = false;
-            userTbl.Size = new Size(986, 530);
-            userTbl.TabIndex = 8;
+            dishTbl.AllowUserToAddRows = false;
+            dishTbl.AllowUserToDeleteRows = false;
+            dishTbl.AllowUserToResizeColumns = false;
+            dishTbl.AllowUserToResizeRows = false;
+            dishTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dishTbl.BackgroundColor = Color.White;
+            dishTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dishTbl.Columns.AddRange(new DataGridViewColumn[] { IdMenu, idProducto, productName, precio, updateBtn, deleteBtn });
+            dishTbl.Location = new Point(16, 114);
+            dishTbl.MultiSelect = false;
+            dishTbl.Name = "dishTbl";
+            dishTbl.ReadOnly = true;
+            dishTbl.RowHeadersVisible = false;
+            dishTbl.Size = new Size(986, 530);
+            dishTbl.TabIndex = 8;
             // 
             // IdMenu
             // 
@@ -129,17 +131,33 @@
             deleteBtn.ToolTipText = "Eliminar";
             deleteBtn.UseColumnTextForButtonValue = true;
             // 
+            // btnBackMenu
+            // 
+            btnBackMenu.BackColor = Color.FromArgb(250, 125, 95);
+            btnBackMenu.FlatAppearance.BorderSize = 0;
+            btnBackMenu.FlatStyle = FlatStyle.Flat;
+            btnBackMenu.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBackMenu.ForeColor = SystemColors.ButtonHighlight;
+            btnBackMenu.Location = new Point(20, 50);
+            btnBackMenu.Name = "btnBackMenu";
+            btnBackMenu.Size = new Size(163, 45);
+            btnBackMenu.TabIndex = 11;
+            btnBackMenu.Text = "Regresar";
+            btnBackMenu.UseVisualStyleBackColor = false;
+            btnBackMenu.Click += btnBackMenu_Click;
+            // 
             // DishManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(btnBackMenu);
             Controls.Add(btnAddUser);
             Controls.Add(MenuLbl);
-            Controls.Add(userTbl);
+            Controls.Add(dishTbl);
             Name = "DishManagementView";
             Size = new Size(1019, 663);
-            ((System.ComponentModel.ISupportInitialize)userTbl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dishTbl).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,12 +166,13 @@
 
         private Button btnAddUser;
         private Label MenuLbl;
-        private DataGridView userTbl;
+        private DataGridView dishTbl;
         private DataGridViewTextBoxColumn IdMenu;
         private DataGridViewTextBoxColumn idProducto;
         private DataGridViewTextBoxColumn productName;
         private DataGridViewTextBoxColumn precio;
         private DataGridViewButtonColumn updateBtn;
         private DataGridViewButtonColumn deleteBtn;
+        private Button btnBackMenu;
     }
 }

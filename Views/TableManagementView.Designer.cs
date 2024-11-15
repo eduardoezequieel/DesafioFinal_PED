@@ -129,12 +129,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(tableTbl);
             Controls.Add(btnAddTable);
             Controls.Add(tableLbl);
             Name = "TableManagementView";
             Size = new Size(1019, 663);
-            Load += TableManagementView_Load;
             ((System.ComponentModel.ISupportInitialize)tableTbl).EndInit();
             ResumeLayout(false);
             PerformLayout();

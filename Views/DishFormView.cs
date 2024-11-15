@@ -1,5 +1,4 @@
-﻿using ProyectoFinal_PED.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,16 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_PED.Views
 {
-    public partial class AddMenu : UserControl
+    public partial class DishFormView : UserControl
     {
-        public AddMenu()
+        public DishFormView()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            GlobalState.LoadView(new MenuView());
+
         }
     }
 }

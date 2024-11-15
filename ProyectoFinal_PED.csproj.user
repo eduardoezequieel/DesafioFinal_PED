@@ -4,10 +4,16 @@
     <_LastSelectedProfileId>C:\Users\User\Documents\GitHub\DesafioFinal_PED\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Views\AddMenu.cs">
+    <Compile Update="Views\MenuFormView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\MenuView.cs">
+    <Compile Update="Views\DishFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\DishManagementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\MenuManagementView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\HomeView.cs">

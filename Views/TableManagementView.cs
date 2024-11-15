@@ -47,10 +47,6 @@ namespace ProyectoFinal_PED.Views
 
         }
 
-        private void TableManagementView_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private async void tableTbl_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {

@@ -84,6 +84,7 @@
             dishTbl.RowHeadersVisible = false;
             dishTbl.Size = new Size(986, 530);
             dishTbl.TabIndex = 8;
+            dishTbl.CellContentClick += dishTbl_CellContentClick_1;
             // 
             // IdMenu
             // 

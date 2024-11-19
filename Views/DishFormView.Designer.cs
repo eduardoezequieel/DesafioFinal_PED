@@ -36,7 +36,7 @@
             productTxt = new TextBox();
             label2 = new Label();
             panel1 = new Panel();
-            textBoxPrecio = new TextBox();
+            PrecioTxt = new TextBox();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -80,6 +80,7 @@
             btnSubmit.TabIndex = 22;
             btnSubmit.Text = "Guardar cambios";
             btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnSubmit_Click_1;
             // 
             // passwordLbl
             // 
@@ -125,21 +126,21 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 246, 244);
-            panel1.Controls.Add(textBoxPrecio);
+            panel1.Controls.Add(PrecioTxt);
             panel1.Location = new Point(278, 327);
             panel1.Name = "panel1";
             panel1.Size = new Size(398, 42);
             panel1.TabIndex = 24;
             // 
-            // textBoxPrecio
+            // PrecioTxt
             // 
-            textBoxPrecio.BackColor = Color.FromArgb(247, 246, 244);
-            textBoxPrecio.BorderStyle = BorderStyle.None;
-            textBoxPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxPrecio.Location = new Point(8, 11);
-            textBoxPrecio.Name = "textBoxPrecio";
-            textBoxPrecio.Size = new Size(378, 22);
-            textBoxPrecio.TabIndex = 0;
+            PrecioTxt.BackColor = Color.FromArgb(247, 246, 244);
+            PrecioTxt.BorderStyle = BorderStyle.None;
+            PrecioTxt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PrecioTxt.Location = new Point(8, 11);
+            PrecioTxt.Name = "PrecioTxt";
+            PrecioTxt.Size = new Size(378, 22);
+            PrecioTxt.TabIndex = 0;
             // 
             // DishFormView
             // 
@@ -165,7 +166,7 @@
 
         #endregion
 
-        private Label label1;
+        public Label label1;
         private Button btnBack;
         private Button btnSubmit;
         private Label passwordLbl;
@@ -173,6 +174,6 @@
         private TextBox productTxt;
         private Label label2;
         private Panel panel1;
-        private TextBox textBoxPrecio;
+        private TextBox PrecioTxt;
     }
 }

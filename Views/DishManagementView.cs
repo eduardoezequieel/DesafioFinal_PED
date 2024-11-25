@@ -1,8 +1,6 @@
 ﻿using ProyectoFinal_PED.Controllers;
 using ProyectoFinal_PED.Models;
 using ProyectoFinal_PED.Helpers;
-using System;
-using System.Windows.Forms;
 
 namespace ProyectoFinal_PED.Views
 {
@@ -20,8 +18,8 @@ namespace ProyectoFinal_PED.Views
 
         private async void LoadDishes()
         {
-            DishesController dishController = new DishesController();
-            var dishes = await dishController.GetDishesByMenuId(selectedMenu.IdMenu);
+            DishesController dishesController = new DishesController();
+            var dishes = await dishesController.GetDishesByMenuId(selectedMenu.IdMenu);            
 
             dishTbl.Rows.Clear();
 

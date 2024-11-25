@@ -42,7 +42,7 @@ namespace ProyectoFinal_PED
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            GlobalState.LoadView(new MenuView());
+            GlobalState.LoadView(new MenuManagementView());
         }
 
         private void btnMesas_Click(object sender, EventArgs e)

@@ -125,7 +125,7 @@
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = SystemColors.ButtonHighlight;
-            btnBack.Location = new Point(692, 597);
+            btnBack.Location = new Point(690, 600);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(112, 45);
             btnBack.TabIndex = 16;
@@ -140,7 +140,7 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdd.ForeColor = SystemColors.ButtonHighlight;
-            btnAdd.Location = new Point(810, 597);
+            btnAdd.Location = new Point(808, 600);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(194, 45);
             btnAdd.TabIndex = 17;

@@ -62,7 +62,7 @@ namespace ProyectoFinal_PED
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
-
+            GlobalState.LoadView(new CustomerBookingManagementView());
         }
     }
 }

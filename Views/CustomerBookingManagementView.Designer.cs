@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            userTbl = new DataGridView();
-            loadingSpinner = new Label();
-            btnAddUser = new Button();
+            bookingsTbl = new DataGridView();
             id = new DataGridViewTextBoxColumn();
             table = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
@@ -40,7 +38,13 @@
             endDate = new DataGridViewTextBoxColumn();
             updateBtn = new DataGridViewButtonColumn();
             deleteBtn = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
+            loadingSpinner = new Label();
+            btnOpenBookingForm = new Button();
+            label3 = new Label();
+            panel3 = new Panel();
+            dtCurrentDate = new DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)bookingsTbl).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -54,46 +58,23 @@
             label1.TabIndex = 7;
             label1.Text = "Listado de reservaciones";
             // 
-            // userTbl
+            // bookingsTbl
             // 
-            userTbl.AllowUserToAddRows = false;
-            userTbl.AllowUserToDeleteRows = false;
-            userTbl.AllowUserToResizeColumns = false;
-            userTbl.AllowUserToResizeRows = false;
-            userTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            userTbl.BackgroundColor = Color.White;
-            userTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userTbl.Columns.AddRange(new DataGridViewColumn[] { id, table, status, customer, startDate, endDate, updateBtn, deleteBtn });
-            userTbl.Location = new Point(16, 117);
-            userTbl.MultiSelect = false;
-            userTbl.Name = "userTbl";
-            userTbl.ReadOnly = true;
-            userTbl.RowHeadersVisible = false;
-            userTbl.Size = new Size(986, 530);
-            userTbl.TabIndex = 8;
-            // 
-            // loadingSpinner
-            // 
-            loadingSpinner.AutoSize = true;
-            loadingSpinner.Location = new Point(477, 381);
-            loadingSpinner.Name = "loadingSpinner";
-            loadingSpinner.Size = new Size(68, 15);
-            loadingSpinner.TabIndex = 9;
-            loadingSpinner.Text = "Cargando...";
-            // 
-            // btnAddUser
-            // 
-            btnAddUser.BackColor = Color.FromArgb(250, 125, 95);
-            btnAddUser.FlatAppearance.BorderSize = 0;
-            btnAddUser.FlatStyle = FlatStyle.Flat;
-            btnAddUser.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddUser.ForeColor = SystemColors.ButtonHighlight;
-            btnAddUser.Location = new Point(765, 53);
-            btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(235, 45);
-            btnAddUser.TabIndex = 10;
-            btnAddUser.Text = "Crear nueva reservación";
-            btnAddUser.UseVisualStyleBackColor = false;
+            bookingsTbl.AllowUserToAddRows = false;
+            bookingsTbl.AllowUserToDeleteRows = false;
+            bookingsTbl.AllowUserToResizeColumns = false;
+            bookingsTbl.AllowUserToResizeRows = false;
+            bookingsTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            bookingsTbl.BackgroundColor = Color.White;
+            bookingsTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bookingsTbl.Columns.AddRange(new DataGridViewColumn[] { id, table, status, customer, startDate, endDate, updateBtn, deleteBtn });
+            bookingsTbl.Location = new Point(16, 117);
+            bookingsTbl.MultiSelect = false;
+            bookingsTbl.Name = "bookingsTbl";
+            bookingsTbl.ReadOnly = true;
+            bookingsTbl.RowHeadersVisible = false;
+            bookingsTbl.Size = new Size(986, 530);
+            bookingsTbl.TabIndex = 8;
             // 
             // id
             // 
@@ -153,18 +134,76 @@
             deleteBtn.ToolTipText = "Eliminar";
             deleteBtn.UseColumnTextForButtonValue = true;
             // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(477, 381);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 9;
+            loadingSpinner.Text = "Cargando...";
+            // 
+            // btnOpenBookingForm
+            // 
+            btnOpenBookingForm.BackColor = Color.FromArgb(250, 125, 95);
+            btnOpenBookingForm.FlatAppearance.BorderSize = 0;
+            btnOpenBookingForm.FlatStyle = FlatStyle.Flat;
+            btnOpenBookingForm.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOpenBookingForm.ForeColor = SystemColors.ButtonHighlight;
+            btnOpenBookingForm.Location = new Point(765, 53);
+            btnOpenBookingForm.Name = "btnOpenBookingForm";
+            btnOpenBookingForm.Size = new Size(235, 45);
+            btnOpenBookingForm.TabIndex = 10;
+            btnOpenBookingForm.Text = "Crear nueva reservación";
+            btnOpenBookingForm.UseVisualStyleBackColor = false;
+            btnOpenBookingForm.Click += btnOpenBookingForm_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(8, 51, 83);
+            label3.Location = new Point(18, 63);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 25);
+            label3.TabIndex = 20;
+            label3.Text = "Fecha";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(247, 246, 244);
+            panel3.Controls.Add(dtCurrentDate);
+            panel3.Location = new Point(82, 56);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(197, 42);
+            panel3.TabIndex = 19;
+            // 
+            // dtCurrentDate
+            // 
+            dtCurrentDate.CalendarMonthBackground = Color.FromArgb(247, 246, 244);
+            dtCurrentDate.CustomFormat = "";
+            dtCurrentDate.Format = DateTimePickerFormat.Short;
+            dtCurrentDate.Location = new Point(8, 9);
+            dtCurrentDate.Name = "dtCurrentDate";
+            dtCurrentDate.Size = new Size(183, 23);
+            dtCurrentDate.TabIndex = 3;
+            dtCurrentDate.ValueChanged += dtCurrentDate_ValueChanged;
+            // 
             // CustomerBookingManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(btnAddUser);
+            Controls.Add(label3);
+            Controls.Add(panel3);
+            Controls.Add(btnOpenBookingForm);
             Controls.Add(loadingSpinner);
-            Controls.Add(userTbl);
+            Controls.Add(bookingsTbl);
             Controls.Add(label1);
             Name = "CustomerBookingManagementView";
             Size = new Size(1019, 663);
-            ((System.ComponentModel.ISupportInitialize)userTbl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bookingsTbl).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -172,9 +211,9 @@
         #endregion
 
         private Label label1;
-        private DataGridView userTbl;
+        private DataGridView bookingsTbl;
         private Label loadingSpinner;
-        private Button btnAddUser;
+        private Button btnOpenBookingForm;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn table;
         private DataGridViewTextBoxColumn status;
@@ -183,5 +222,8 @@
         private DataGridViewTextBoxColumn endDate;
         private DataGridViewButtonColumn updateBtn;
         private DataGridViewButtonColumn deleteBtn;
+        private Label label3;
+        private Panel panel3;
+        private DateTimePicker dtCurrentDate;
     }
 }

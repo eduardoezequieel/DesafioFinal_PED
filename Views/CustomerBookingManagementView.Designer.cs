@@ -30,19 +30,18 @@
         {
             label1 = new Label();
             bookingsTbl = new DataGridView();
+            loadingSpinner = new Label();
+            btnOpenBookingForm = new Button();
+            label3 = new Label();
+            panel3 = new Panel();
+            dtCurrentDate = new DateTimePicker();
             id = new DataGridViewTextBoxColumn();
             table = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
             customer = new DataGridViewTextBoxColumn();
             startDate = new DataGridViewTextBoxColumn();
             endDate = new DataGridViewTextBoxColumn();
-            updateBtn = new DataGridViewButtonColumn();
-            deleteBtn = new DataGridViewButtonColumn();
-            loadingSpinner = new Label();
-            btnOpenBookingForm = new Button();
-            label3 = new Label();
-            panel3 = new Panel();
-            dtCurrentDate = new DateTimePicker();
+            cancelBtn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)bookingsTbl).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -67,7 +66,7 @@
             bookingsTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             bookingsTbl.BackgroundColor = Color.White;
             bookingsTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            bookingsTbl.Columns.AddRange(new DataGridViewColumn[] { id, table, status, customer, startDate, endDate, updateBtn, deleteBtn });
+            bookingsTbl.Columns.AddRange(new DataGridViewColumn[] { id, table, status, customer, startDate, endDate, cancelBtn });
             bookingsTbl.Location = new Point(16, 117);
             bookingsTbl.MultiSelect = false;
             bookingsTbl.Name = "bookingsTbl";
@@ -75,64 +74,7 @@
             bookingsTbl.RowHeadersVisible = false;
             bookingsTbl.Size = new Size(986, 530);
             bookingsTbl.TabIndex = 8;
-            // 
-            // id
-            // 
-            id.HeaderText = "Id";
-            id.Name = "id";
-            id.ReadOnly = true;
-            id.Visible = false;
-            // 
-            // table
-            // 
-            table.HeaderText = "Mesa";
-            table.Name = "table";
-            table.ReadOnly = true;
-            // 
-            // status
-            // 
-            status.HeaderText = "Estado";
-            status.Name = "status";
-            status.ReadOnly = true;
-            // 
-            // customer
-            // 
-            customer.HeaderText = "Cliente";
-            customer.Name = "customer";
-            customer.ReadOnly = true;
-            // 
-            // startDate
-            // 
-            startDate.HeaderText = "Fecha/hora inicio";
-            startDate.Name = "startDate";
-            startDate.ReadOnly = true;
-            // 
-            // endDate
-            // 
-            endDate.HeaderText = "Fecha/hora fin";
-            endDate.Name = "endDate";
-            endDate.ReadOnly = true;
-            // 
-            // updateBtn
-            // 
-            updateBtn.FillWeight = 60.62371F;
-            updateBtn.HeaderText = "Editar";
-            updateBtn.Name = "updateBtn";
-            updateBtn.ReadOnly = true;
-            updateBtn.Text = "Editar";
-            updateBtn.ToolTipText = "Editar";
-            updateBtn.UseColumnTextForButtonValue = true;
-            // 
-            // deleteBtn
-            // 
-            deleteBtn.FillWeight = 60.9137039F;
-            deleteBtn.HeaderText = "Eliminar";
-            deleteBtn.Name = "deleteBtn";
-            deleteBtn.ReadOnly = true;
-            deleteBtn.Resizable = DataGridViewTriState.True;
-            deleteBtn.Text = "Eliminar";
-            deleteBtn.ToolTipText = "Eliminar";
-            deleteBtn.UseColumnTextForButtonValue = true;
+            bookingsTbl.CellContentClick += bookingsTbl_CellContentClick;
             // 
             // loadingSpinner
             // 
@@ -189,6 +131,53 @@
             dtCurrentDate.TabIndex = 3;
             dtCurrentDate.ValueChanged += dtCurrentDate_ValueChanged;
             // 
+            // id
+            // 
+            id.HeaderText = "Id";
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Visible = false;
+            // 
+            // table
+            // 
+            table.HeaderText = "Mesa";
+            table.Name = "table";
+            table.ReadOnly = true;
+            // 
+            // status
+            // 
+            status.HeaderText = "Estado";
+            status.Name = "status";
+            status.ReadOnly = true;
+            // 
+            // customer
+            // 
+            customer.HeaderText = "Cliente";
+            customer.Name = "customer";
+            customer.ReadOnly = true;
+            // 
+            // startDate
+            // 
+            startDate.HeaderText = "Fecha/hora inicio";
+            startDate.Name = "startDate";
+            startDate.ReadOnly = true;
+            // 
+            // endDate
+            // 
+            endDate.HeaderText = "Fecha/hora fin";
+            endDate.Name = "endDate";
+            endDate.ReadOnly = true;
+            // 
+            // cancelBtn
+            // 
+            cancelBtn.FillWeight = 60.62371F;
+            cancelBtn.HeaderText = "Acciones";
+            cancelBtn.Name = "cancelBtn";
+            cancelBtn.ReadOnly = true;
+            cancelBtn.Text = "Cancelar";
+            cancelBtn.ToolTipText = "Cancelar";
+            cancelBtn.UseColumnTextForButtonValue = true;
+            // 
             // CustomerBookingManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -214,16 +203,15 @@
         private DataGridView bookingsTbl;
         private Label loadingSpinner;
         private Button btnOpenBookingForm;
+        private Label label3;
+        private Panel panel3;
+        private DateTimePicker dtCurrentDate;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn table;
         private DataGridViewTextBoxColumn status;
         private DataGridViewTextBoxColumn customer;
         private DataGridViewTextBoxColumn startDate;
         private DataGridViewTextBoxColumn endDate;
-        private DataGridViewButtonColumn updateBtn;
-        private DataGridViewButtonColumn deleteBtn;
-        private Label label3;
-        private Panel panel3;
-        private DateTimePicker dtCurrentDate;
+        private DataGridViewButtonColumn cancelBtn;
     }
 }

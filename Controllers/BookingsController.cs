@@ -163,5 +163,32 @@ namespace ProyectoFinal_PED.Controllers
                 await cn.CloseAsync();
             }
         }
+
+        public async Task<(bool result, string message)> CancelBooking(int bookingId)
+        {
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = await connection.GetConnection();
+            string query = "UPDATE reservacion SET idEstadoReservacion = 3 WHERE idReservacion = @bookingId";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.AddWithValue("@bookingId", bookingId);
+
+                int result = await command.ExecuteNonQueryAsync();
+
+                if (result == 0) return (false, "No se pudo cancelar la reservación.");
+
+                return (true, "Reservación cancelada exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                return (false, $"Error al cancelar la reservación: {ex.Message}");
+            }
+            finally
+            {
+                await cn.CloseAsync();
+            }
+        }
     }
 }

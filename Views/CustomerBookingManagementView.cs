@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_PED.Controllers;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using ProyectoFinal_PED.Controllers;
 using ProyectoFinal_PED.Helpers;
 using ProyectoFinal_PED.Models;
 
@@ -51,6 +52,39 @@ namespace ProyectoFinal_PED.Views
         {
             this.selectedDate = dtCurrentDate.Value;
             this.LoadBookings();
+        }
+
+        private async void bookingsTbl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == bookingsTbl.Columns["cancelBtn"].Index && e.RowIndex >= 0)
+            {
+                var bookingId = bookingsTbl.Rows[e.RowIndex].Cells["id"].Value;
+                Booking booking = this.Bookings[(int)bookingId];
+
+                if (booking.IdStatus != 1)
+                {
+                    MessageBox.Show("No se puede cancelar esta reservación.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var confirmResult = MessageBox.Show($"¿Está seguro de que desea cancelar la reservación del cliente {booking.Customer} en la mesa {booking.Table.Id}? Esta acción es irreversible.",
+                                             "Confirmar cancelación",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.No) return;
+
+                (bool result, string message) = await this.Controller.CancelBooking(booking.Id);
+
+                if(!result)
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                MessageBox.Show(message, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.LoadBookings();
+            }
         }
     }
 }

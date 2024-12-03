@@ -84,14 +84,19 @@ namespace ProyectoFinal_PED.Views
                 };
 
                 MessageBox.Show(messageOrder, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"id: {createdOrder?.Id} Reservacion id: {createdOrder?.bookingId}");
-                GlobalState.LoadView(new OrderManagementView());
+                GlobalState.LoadView(new OrderDetailManagement(createdOrder));
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            GlobalState.LoadView(new CustomerBookingQueryView());
+            if (this.RedirectToBookingsManagement)
+            {
+                GlobalState.LoadView(new CustomerBookingQueryView());
+            } else
+            {
+                GlobalState.LoadView(new SelectOrderOriginView());
+            }
         }
     }
 }

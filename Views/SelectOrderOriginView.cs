@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_PED.Controllers;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using ProyectoFinal_PED.Controllers;
 using ProyectoFinal_PED.Helpers;
 using ProyectoFinal_PED.Models;
 
@@ -7,6 +8,7 @@ namespace ProyectoFinal_PED.Views
     public partial class SelectOrderOriginView : UserControl
     {
         private BookingsController bookingsController = new BookingsController();
+        private OrderController orderController = new OrderController();
         private TablesController tableController = new TablesController();
         private Dictionary<int, Booking> AvailableBookings = new Dictionary<int, Booking>();
         public SelectOrderOriginView()
@@ -58,6 +60,36 @@ namespace ProyectoFinal_PED.Views
             }
 
             GlobalState.LoadView(new CustomerBookingFormView(availableTables, DateTime.Now, DateTime.Now, DateTime.Now.AddHours(2), false));
+        }
+
+        private async void bookingsTbl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == bookingsTbl.Columns["selectBtn"].Index && e.RowIndex >= 0)
+            {
+                var bookingId = bookingsTbl.Rows[e.RowIndex].Cells["id"].Value;
+                Booking booking = AvailableBookings[(int)bookingId];
+
+                var confirmResult = MessageBox.Show($"¿Está seguro de que desea inicializar la orden con la reservación del cliente {booking.Customer}?",
+                                             "Confirmar",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.No) return;
+                (bool result, string message, Order? order) = await this.orderController.CreateEmptyOrder(booking.Id);
+                
+                if(!result)
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                } else if (order == null)
+                {
+                    MessageBox.Show("La orden fue inicializada pero no ha podido obtenerse.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                MessageBox.Show(message, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GlobalState.LoadView(new OrderDetailManagement(order));
+            }
         }
     }
 }

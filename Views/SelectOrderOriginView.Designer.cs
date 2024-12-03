@@ -95,6 +95,7 @@
             bookingsTbl.RowHeadersVisible = false;
             bookingsTbl.Size = new Size(986, 530);
             bookingsTbl.TabIndex = 13;
+            bookingsTbl.CellContentClick += bookingsTbl_CellContentClick;
             // 
             // id
             // 

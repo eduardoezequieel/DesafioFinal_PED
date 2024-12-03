@@ -38,6 +38,13 @@ namespace ProyectoFinal_PED.Controllers
                     insertedOrder = new Order((int)id, 0, (int)statusId, bookingId, (Decimal)total);
                 }
 
+                string updateBookingQuery = "UPDATE reservacion SET idEstadoReservacion = 2 WHERE idReservacion = @bookingId";
+
+                SqlCommand updateBookingCommand = new SqlCommand(updateBookingQuery, cn);
+                updateBookingCommand.Parameters.AddWithValue("@bookingId", bookingId);
+
+                await updateBookingCommand.ExecuteNonQueryAsync();
+
                 return (true, "Orden inicializada correctamente. Puede agregar elementos al detalle de la orden a continuación.", insertedOrder);
             }
             catch (Exception ex)

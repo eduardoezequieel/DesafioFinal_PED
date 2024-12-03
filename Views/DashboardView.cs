@@ -64,5 +64,10 @@ namespace ProyectoFinal_PED
         {
             GlobalState.LoadView(new CustomerBookingManagementView());
         }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            GlobalState.LoadView(new OrderManagementView());
+        }
     }
 }

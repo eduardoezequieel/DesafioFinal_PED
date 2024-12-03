@@ -13,6 +13,58 @@ namespace ProyectoFinal_PED.Controllers
             this.Bookings = new Dictionary<int, Booking>();
         }
 
+        public async Task<Dictionary<int, Booking>> GetAvailableBookingsForToday()
+        {
+            this.Bookings.Clear();
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = await connection.GetConnection();
+
+            string query = @"SELECT r.idReservacion, m.idMesa, m.notas, m.capacidad, er.idEstadoReserva, er.nombreEstadoReserva, u.idUsuario, u.usuario, r.cliente, r.fechaHoraInicio, r.fechaHoraFin 
+                            FROM reservacion AS r 
+                            INNER JOIN mesa AS m ON m.idMesa = r.idMesa 
+                            INNER JOIN usuario AS u ON u.idUsuario = r.idUsuario 
+                            INNER JOIN estado_reserva AS er ON er.idEstadoReserva = r.idEstadoReservacion 
+                            WHERE CONVERT(DATE, fechaHoraInicio) = @startDate AND er.idEstadoReserva = 1";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.AddWithValue("@startDate", DateTime.Now.ToString("yyyy-MM-dd"));
+                SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                while (await reader.ReadAsync())
+                {
+                    var id = reader["idReservacion"];
+                    var idTable = reader["idMesa"];
+                    var notes = reader["notas"];
+                    var capacity = reader["capacidad"];
+                    var idStatus = reader["idEstadoReserva"];
+                    var statusName = reader["nombreEstadoReserva"];
+                    var idUser = reader["idUsuario"];
+                    var username = reader["usuario"];
+                    var customer = reader["cliente"];
+                    var startDate = reader["fechaHoraInicio"];
+                    var endDate = reader["fechaHoraFin"];
+
+                    Table table = new Table((int)idTable, (int)capacity, (string)notes);
+                    Booking booking = new Booking((int)id, (int)idStatus, (string)statusName, (int)idUser, (string)customer, (DateTime)startDate, (DateTime)endDate, (string)username, table);
+                    this.Bookings.Add((int)id, booking);
+                }
+
+                await reader.CloseAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar la consulta: " + ex.Message);
+            }
+            finally
+            {
+                await cn.CloseAsync();
+            }
+
+            return this.Bookings;
+        }
+
         public async Task<Dictionary<int, Booking>> GetBookingsByDate(string selectedDate)
         {
             this.Bookings.Clear();
@@ -130,7 +182,7 @@ namespace ProyectoFinal_PED.Controllers
             return this.Bookings;
         }
 
-        public async Task<(bool result, string message)> AddBooking(Booking booking)
+        public async Task<(bool result, string message, int? createdBookingId)> AddBooking(Booking booking)
         {
             DatabaseConnection connection = new DatabaseConnection();
             SqlConnection cn = await connection.GetConnection();
@@ -150,13 +202,34 @@ namespace ProyectoFinal_PED.Controllers
 
                 int result = await command.ExecuteNonQueryAsync();
 
-                if (result == 0) return (false, "No se pudo insertar la reservación.");
+                if (result == 0) return (false, "No se pudo insertar la reservación.", null);
 
-                return (true, "Reservación creada exitosamente.");
+                int? bookingId = null;
+
+                string insertedBookingQuery = @"SELECT idReservacion 
+                                                FROM reservacion 
+                                                WHERE cliente = @customer 
+                                                AND fechaHoraInicio = @startDate 
+                                                AND fechaHoraFin = @endDate";
+
+                SqlCommand insertedBookingCommand = new SqlCommand(insertedBookingQuery, cn);
+
+                insertedBookingCommand.Parameters.AddWithValue("@customer", booking.Customer);
+                insertedBookingCommand.Parameters.AddWithValue("@startDate", booking.StartDate);
+                insertedBookingCommand.Parameters.AddWithValue("@endDate", booking.EndDate);
+
+                SqlDataReader reader = await insertedBookingCommand.ExecuteReaderAsync();
+
+                while (reader.Read())
+                {
+                    bookingId = (int)reader["idReservacion"];
+                }
+
+                return (true, "Reservación creada exitosamente.", bookingId);
             }
             catch (Exception ex)
             {
-                return (false, $"Error al insertar la reservación: {ex.Message}");
+                return (false, $"Error al insertar la reservación: {ex.Message}", null);
             }
             finally
             {

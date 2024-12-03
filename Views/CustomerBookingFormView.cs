@@ -7,22 +7,27 @@ namespace ProyectoFinal_PED.Views
     public partial class CustomerBookingFormView : UserControl
     {
         private BookingsController bookingsController;
+        private OrderController orderController;
         private DateTime StartDate;
         private DateTime EndDate;
+        private Boolean RedirectToBookingsManagement = true;
 
         public CustomerBookingFormView(
             List<Table> tables,
             DateTime selectedDate,
             DateTime startDate,
-            DateTime endDate
+            DateTime endDate,
+            Boolean redirectToBookingsManagement = true
             )
         {
             InitializeComponent();
 
             this.StartDate = startDate;
             this.EndDate = endDate;
+            this.RedirectToBookingsManagement = redirectToBookingsManagement;
 
             this.bookingsController = new BookingsController();
+            this.orderController = new OrderController();
 
             this.tablesCb.DisplayMember = "Id";
             this.tablesCb.ValueMember = "Id";
@@ -47,7 +52,12 @@ namespace ProyectoFinal_PED.Views
             Table selectedTableObj = new Table((int)selectedTable, 0, "");
             Booking booking = new Booking(0, 1, "", 0, customerName, this.StartDate, this.EndDate, "", selectedTableObj);
 
-            (bool result, string message) = await this.bookingsController.AddBooking(booking);
+            if(!this.RedirectToBookingsManagement)
+            {
+                booking.IdStatus = 2;
+            }
+
+            (bool result, string message, int? createdBookingId) = await this.bookingsController.AddBooking(booking);
 
             if (!result)
             {
@@ -56,7 +66,27 @@ namespace ProyectoFinal_PED.Views
             };
 
             MessageBox.Show(message, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            GlobalState.LoadView(new CustomerBookingManagementView());
+
+            if(this.RedirectToBookingsManagement)
+            {
+                GlobalState.LoadView(new CustomerBookingManagementView());
+            }
+            else
+            {
+                if (createdBookingId == null) return;
+
+                (bool resultOrder, string messageOrder, Order? createdOrder) = await this.orderController.CreateEmptyOrder((int)createdBookingId);
+
+                if (!resultOrder || createdOrder == null)
+                {
+                    MessageBox.Show(messageOrder, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                };
+
+                MessageBox.Show(messageOrder, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"id: {createdOrder?.Id} Reservacion id: {createdOrder?.bookingId}");
+                GlobalState.LoadView(new OrderManagementView());
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

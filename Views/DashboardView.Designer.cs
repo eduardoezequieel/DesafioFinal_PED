@@ -130,6 +130,7 @@
             btnOrders.TabIndex = 19;
             btnOrders.Text = "Ordenes";
             btnOrders.UseVisualStyleBackColor = false;
+            btnOrders.Click += btnOrders_Click;
             // 
             // btnReservas
             // 

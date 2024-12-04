@@ -32,7 +32,6 @@
             btnMinimize = new Button();
             panel1 = new Panel();
             userLbl = new Label();
-            btnInvoices = new Button();
             btnOrders = new Button();
             btnReservas = new Button();
             btnMesas = new Button();
@@ -40,6 +39,7 @@
             btnHome = new Button();
             btnUsers = new Button();
             panelContainer = new Panel();
+            btnLogOut = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -76,8 +76,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(250, 125, 95);
+            panel1.Controls.Add(btnLogOut);
             panel1.Controls.Add(userLbl);
-            panel1.Controls.Add(btnInvoices);
             panel1.Controls.Add(btnOrders);
             panel1.Controls.Add(btnReservas);
             panel1.Controls.Add(btnMesas);
@@ -99,22 +99,6 @@
             userLbl.Size = new Size(65, 21);
             userLbl.TabIndex = 21;
             userLbl.Text = "Usuario";
-            // 
-            // btnInvoices
-            // 
-            btnInvoices.BackColor = Color.FromArgb(255, 109, 72);
-            btnInvoices.FlatAppearance.BorderSize = 0;
-            btnInvoices.FlatStyle = FlatStyle.Flat;
-            btnInvoices.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInvoices.ForeColor = SystemColors.ButtonHighlight;
-            btnInvoices.Location = new Point(12, 326);
-            btnInvoices.Margin = new Padding(3, 2, 3, 2);
-            btnInvoices.Name = "btnInvoices";
-            btnInvoices.Size = new Size(207, 36);
-            btnInvoices.TabIndex = 20;
-            btnInvoices.Text = "Facturas";
-            btnInvoices.UseVisualStyleBackColor = false;
-            btnInvoices.Click += btnInvoices_Click;
             // 
             // btnOrders
             // 
@@ -218,6 +202,22 @@
             panelContainer.TabIndex = 12;
             panelContainer.Paint += d;
             // 
+            // btnLogOut
+            // 
+            btnLogOut.BackColor = Color.FromArgb(255, 109, 72);
+            btnLogOut.FlatAppearance.BorderSize = 0;
+            btnLogOut.FlatStyle = FlatStyle.Flat;
+            btnLogOut.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogOut.ForeColor = SystemColors.ButtonHighlight;
+            btnLogOut.Location = new Point(12, 673);
+            btnLogOut.Margin = new Padding(3, 2, 3, 2);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(207, 36);
+            btnLogOut.TabIndex = 22;
+            btnLogOut.Text = "Cerrar sesión";
+            btnLogOut.UseVisualStyleBackColor = false;
+            btnLogOut.Click += btnLogOut_Click;
+            // 
             // DashboardView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -247,8 +247,8 @@
         private Button btnMesas;
         private Button btnMenu;
         private Button btnReservas;
-        private Button btnInvoices;
         private Button btnOrders;
         private Label userLbl;
+        private Button btnLogOut;
     }
 }

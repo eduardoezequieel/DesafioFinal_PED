@@ -1,8 +1,16 @@
 using ProyectoFinal_PED.Helpers;
+using ProyectoFinal_PED.Models;
 using ProyectoFinal_PED.Views;
 
 namespace ProyectoFinal_PED
 {
+    public enum UserRole : int
+    {
+        Admin = 1,
+        Manager = 2,
+        Employee = 3
+    }
+
     public partial class DashboardView : Form
     {
         public DashboardView()
@@ -12,7 +20,35 @@ namespace ProyectoFinal_PED
             GlobalState.SetPanelContainer(panelContainer);
             GlobalState.LoadView(new HomeView());
 
+            this.CheckUserRole();
             this.LoadUsers();
+        }
+
+        private void CheckUserRole()
+        {
+            int userRole = GlobalState.GetCurrentUser().GetUserType();
+
+            if (userRole == (int)UserRole.Admin) return;
+
+            if (userRole == (int)UserRole.Manager)
+            {
+                btnUsers.Visible = false;
+                btnMenu.Location = new Point(12, 95);
+                btnMesas.Location = new Point(12, 140);
+                btnReservas.Location = new Point(12, 184);
+                btnOrders.Location = new Point(12, 230);
+                return;
+            }
+
+            if (userRole == (int)UserRole.Employee)
+            {
+                btnUsers.Visible = false;
+                btnMenu.Visible = false;
+                btnMesas.Visible = false;
+                btnReservas.Location = new Point(12, 95);
+                btnOrders.Location = new Point(12, 140);
+                return;
+            }
         }
 
         private void LoadUsers()
@@ -68,6 +104,15 @@ namespace ProyectoFinal_PED
         private void btnOrders_Click(object sender, EventArgs e)
         {
             GlobalState.LoadView(new OrderManagementView());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            GlobalState.SetCurrentUser(null);
+            SignInView form = new SignInView();
+
+            form.Show();
+            this.Hide();
         }
     }
 }

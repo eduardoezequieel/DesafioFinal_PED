@@ -11,6 +11,8 @@ namespace ProyectoFinal_PED.Views
         public OrderManagementView()
         {
             InitializeComponent();
+
+            this.LoadOrders();
         }
 
         private async void LoadOrders()
@@ -18,12 +20,12 @@ namespace ProyectoFinal_PED.Views
             this.Orders.Clear();
             this.ShowLoadingSpinner(true);
             this.Orders = await this.OrderController.GetOrders();
-            this.userTbl.Rows.Clear();
+            this.ordersTbl.Rows.Clear();
 
-            foreach (KeyValuePair<int, User> item in users)
+            foreach (KeyValuePair<int, Order> item in Orders)
             {
-                User user = item.Value;
-                this.userTbl.Rows.Add(user.GetId(), user.GetUsername(), user.GetUserTypeName());
+                Order order = item.Value;
+                this.ordersTbl.Rows.Add(order.Id, order.PaymentMethodName, order.StatusName, order.Customer, $"${order.Total.ToString()}");
             }
 
             this.ShowLoadingSpinner(false);
@@ -37,7 +39,19 @@ namespace ProyectoFinal_PED.Views
         private void ShowLoadingSpinner(bool show)
         {
             loadingSpinner.Visible = show;
-            userTbl.Visible = !show;
+            ordersTbl.Visible = !show;
+        }
+
+        private void ordersTbl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == ordersTbl.Columns["updateBtn"].Index && e.RowIndex >= 0)
+            {
+                var orderId = ordersTbl.Rows[e.RowIndex].Cells["id"].Value;
+                Order order = Orders[(int)orderId];
+
+                GlobalState.LoadView(new OrderDetailManagement(order));
+                return;
+            }
         }
     }
 }

@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            userTbl = new DataGridView();
+            ordersTbl = new DataGridView();
             loadingSpinner = new Label();
             btnAddOrder = new Button();
             id = new DataGridViewTextBoxColumn();
             paymentMethod = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
             customer = new DataGridViewTextBoxColumn();
+            total = new DataGridViewTextBoxColumn();
             updateBtn = new DataGridViewButtonColumn();
-            deleteBtn = new DataGridViewButtonColumn();
-            payBtn = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)userTbl).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ordersTbl).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -53,23 +52,24 @@
             label1.TabIndex = 7;
             label1.Text = "Listado de ordenes";
             // 
-            // userTbl
+            // ordersTbl
             // 
-            userTbl.AllowUserToAddRows = false;
-            userTbl.AllowUserToDeleteRows = false;
-            userTbl.AllowUserToResizeColumns = false;
-            userTbl.AllowUserToResizeRows = false;
-            userTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            userTbl.BackgroundColor = Color.White;
-            userTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            userTbl.Columns.AddRange(new DataGridViewColumn[] { id, paymentMethod, status, customer, updateBtn, deleteBtn, payBtn });
-            userTbl.Location = new Point(16, 117);
-            userTbl.MultiSelect = false;
-            userTbl.Name = "userTbl";
-            userTbl.ReadOnly = true;
-            userTbl.RowHeadersVisible = false;
-            userTbl.Size = new Size(986, 530);
-            userTbl.TabIndex = 8;
+            ordersTbl.AllowUserToAddRows = false;
+            ordersTbl.AllowUserToDeleteRows = false;
+            ordersTbl.AllowUserToResizeColumns = false;
+            ordersTbl.AllowUserToResizeRows = false;
+            ordersTbl.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ordersTbl.BackgroundColor = Color.White;
+            ordersTbl.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ordersTbl.Columns.AddRange(new DataGridViewColumn[] { id, paymentMethod, status, customer, total, updateBtn });
+            ordersTbl.Location = new Point(16, 117);
+            ordersTbl.MultiSelect = false;
+            ordersTbl.Name = "ordersTbl";
+            ordersTbl.ReadOnly = true;
+            ordersTbl.RowHeadersVisible = false;
+            ordersTbl.Size = new Size(986, 530);
+            ordersTbl.TabIndex = 8;
+            ordersTbl.CellContentClick += ordersTbl_CellContentClick;
             // 
             // loadingSpinner
             // 
@@ -120,6 +120,12 @@
             customer.Name = "customer";
             customer.ReadOnly = true;
             // 
+            // total
+            // 
+            total.HeaderText = "Total";
+            total.Name = "total";
+            total.ReadOnly = true;
+            // 
             // updateBtn
             // 
             updateBtn.FillWeight = 60.62371F;
@@ -130,27 +136,6 @@
             updateBtn.ToolTipText = "Editar";
             updateBtn.UseColumnTextForButtonValue = true;
             // 
-            // deleteBtn
-            // 
-            deleteBtn.FillWeight = 60.9137039F;
-            deleteBtn.HeaderText = "Eliminar";
-            deleteBtn.Name = "deleteBtn";
-            deleteBtn.ReadOnly = true;
-            deleteBtn.Resizable = DataGridViewTriState.True;
-            deleteBtn.Text = "Eliminar";
-            deleteBtn.ToolTipText = "Eliminar";
-            deleteBtn.UseColumnTextForButtonValue = true;
-            // 
-            // payBtn
-            // 
-            payBtn.HeaderText = "Pagar orden";
-            payBtn.Name = "payBtn";
-            payBtn.ReadOnly = true;
-            payBtn.Resizable = DataGridViewTriState.True;
-            payBtn.SortMode = DataGridViewColumnSortMode.Automatic;
-            payBtn.Text = "Pagar orden";
-            payBtn.ToolTipText = "Pagar orden";
-            // 
             // OrderManagementView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -158,11 +143,11 @@
             BackColor = Color.White;
             Controls.Add(btnAddOrder);
             Controls.Add(loadingSpinner);
-            Controls.Add(userTbl);
+            Controls.Add(ordersTbl);
             Controls.Add(label1);
             Name = "OrderManagementView";
             Size = new Size(1019, 663);
-            ((System.ComponentModel.ISupportInitialize)userTbl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ordersTbl).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -170,15 +155,14 @@
         #endregion
 
         private Label label1;
-        private DataGridView userTbl;
+        private DataGridView ordersTbl;
         private Label loadingSpinner;
         private Button btnAddOrder;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn paymentMethod;
         private DataGridViewTextBoxColumn status;
         private DataGridViewTextBoxColumn customer;
+        private DataGridViewTextBoxColumn total;
         private DataGridViewButtonColumn updateBtn;
-        private DataGridViewButtonColumn deleteBtn;
-        private DataGridViewButtonColumn payBtn;
     }
 }

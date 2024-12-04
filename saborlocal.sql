@@ -95,11 +95,12 @@ CREATE TABLE detalle_orden(
     CONSTRAINT fk_platillo FOREIGN KEY (idPlatillo) REFERENCES platillo(idPlatillo)
 )
 
-INSERT INTO tipo_usuario(nombreTipoUsuario) VALUES ('Administrador');
+INSERT INTO tipo_usuario(nombreTipoUsuario) VALUES ('Administrador'), ('Gerente'), ('Empleado');
 INSERT INTO usuario(idTipoUsuario, usuario, contrasena) VALUES (1, 'admin', 'HrE4PPDP3lAAShHArhTdCQ==');
 
 INSERT INTO estado_reserva(nombreEstadoReserva) VALUES ('Pendiente'), ('Activa'), ('Cancelada'), ('Finalizada');
 INSERT INTO estado_orden(estadoOrden) VALUES ('Activa'), ('Pagada'), ('Cancelada');
+INSERT INTO metodo_pago(metodoPago) VALUES ('Efectivo'), ('Tarjeta');
 
 INSERT INTO mesa(capacidad, notas) VALUES
 (6, 'Esta a la par de la ventana'),
@@ -113,27 +114,5 @@ INSERT INTO mesa(capacidad, notas) VALUES
 (3, 'Mesa pequeña para dos personas'),
 (9, 'Ubicada en la terraza');
 
--- Reservación 1
-INSERT INTO reservacion (idMesa, idEstadoReservacion, idUsuario, cliente, fechaHoraInicio, fechaHoraFin)
-VALUES (2, 1, 3, 'Juan Pérez', GETDATE(), DATEADD(HOUR, 2, GETDATE()));
 
--- Reservación 2
-INSERT INTO reservacion (idMesa, idEstadoReservacion, idUsuario, cliente, fechaHoraInicio, fechaHoraFin)
-VALUES (6, 2, 3, 'María López', GETDATE(), DATEADD(HOUR, 3, GETDATE()));
-
--- Reservación 3
-INSERT INTO reservacion (idMesa, idEstadoReservacion, idUsuario, cliente, fechaHoraInicio, fechaHoraFin)
-VALUES (7, 3, 3, 'Carlos Méndez', GETDATE(), DATEADD(HOUR, 1, GETDATE()));
-
--- Reservación 4
-INSERT INTO reservacion (idMesa, idEstadoReservacion, idUsuario, cliente, fechaHoraInicio, fechaHoraFin)
-VALUES (11, 4, 3, 'Ana García', GETDATE(), DATEADD(HOUR, 4, GETDATE()));
-
--- Reservación 5
-INSERT INTO reservacion (idMesa, idEstadoReservacion, idUsuario, cliente, fechaHoraInicio, fechaHoraFin)
-VALUES (12, 1, 3, 'Luis Martínez', GETDATE(), DATEADD(HOUR, 2, GETDATE()));
-
--- Reservación 6
-INSERT INTO reservacion (idMesa, idEstadoReservacion, idUsuario, cliente, fechaHoraInicio, fechaHoraFin)
-VALUES (13, 2, 3, 'Sofía Herrera', GETDATE(), DATEADD(HOUR, 3, GETDATE()));
 

@@ -6,6 +6,63 @@ namespace ProyectoFinal_PED.Controllers
 {
     public class OrderController
     {
+        private Dictionary<int, Order> Orders = new Dictionary<int, Order>();
+        public async Task<Dictionary<int, Order>> GetOrders()
+        {
+            this.Orders.Clear();
+            DatabaseConnection connection = new DatabaseConnection();
+            SqlConnection cn = await connection.GetConnection();
+
+            string query = @"SELECT o.idOrden, mp.idMetodoPago, COALESCE(mp.metodoPago, 'Sin pagar') AS metodoPago, eo.estadoOrden, eo.idEstadoOrden, r.cliente, r.fechaHoraInicio, r.fechaHoraFin, o.total, r.idReservacion 
+                            FROM orden AS o 
+                            LEFT JOIN metodo_pago AS mp ON o.idMetodoPago = mp.idMetodoPago 
+                            INNER JOIN estado_orden AS eo ON eo.idEstadoOrden = o.idEstadoOrden 
+                            INNER JOIN reservacion AS r ON r.idReservacion = o.idReservacion";
+
+            try
+            {
+                SqlCommand command = new SqlCommand(query, cn);
+                SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                while (reader.Read())
+                {
+                    var id = reader["idOrden"];
+                    var paymentMethodId = reader["idMetodoPago"];
+                    var paymentMethodName = reader["metodoPago"];
+                    var statusName = reader["estadoOrden"];
+                    var statusId = reader["idEstadoOrden"];
+                    var customer = reader["cliente"];
+                    var startTime = reader["fechaHoraInicio"];
+                    var endTime = reader["fechaHoraFin"];
+                    var total = reader["total"];
+                    var bookingId = reader["idReservacion"];
+
+                    Order createdOrder = new Order(
+                        (int)id, 
+                        (int)paymentMethodId, 
+                        (string)paymentMethodName, 
+                        (string)customer, 
+                        (int)statusId, 
+                        (string)statusName, 
+                        (int)bookingId, 
+                        (Decimal)total, 
+                        (DateTime)startTime, 
+                        (DateTime)endTime);
+
+                    this.Orders.Add(createdOrder.Id, createdOrder);
+                }
+
+                return this.Orders;
+            }
+            catch (Exception ex)
+            {
+                return 
+            }
+            finally
+            {
+                await cn.CloseAsync();
+            }
+        }
         public async Task<(bool result, string message, Order? order)> CreateEmptyOrder(int bookingId)
         {
             DatabaseConnection connection = new DatabaseConnection();

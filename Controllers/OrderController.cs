@@ -30,7 +30,7 @@ namespace ProyectoFinal_PED.Controllers
                 SqlCommand command = new SqlCommand(query, cn);
                 SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var id = reader["idMetodoPago"];
                     var name = reader["metodoPago"];
@@ -111,7 +111,7 @@ namespace ProyectoFinal_PED.Controllers
 
                 Decimal total = 0;
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     total = (Decimal)reader["total"];
                 }
@@ -245,7 +245,7 @@ namespace ProyectoFinal_PED.Controllers
                 SqlCommand command = new SqlCommand(query, cn);
                 SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var id = reader["idOrden"];
                     var paymentMethodId = reader["idMetodoPago"];
@@ -304,7 +304,7 @@ namespace ProyectoFinal_PED.Controllers
                 command.Parameters.AddWithValue("@orderId", orderId);
                 SqlDataReader reader = await command.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var id = reader["idDetalleOrden"];
                     var dishId = reader["idPlatillo"];
@@ -373,7 +373,7 @@ namespace ProyectoFinal_PED.Controllers
 
                 SqlDataReader reader = await insertedOrderCommand.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var id = reader["idOrden"];
                     var paymentMethodId = reader["idMetodoPago"];

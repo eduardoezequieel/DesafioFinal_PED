@@ -220,10 +220,12 @@ namespace ProyectoFinal_PED.Controllers
 
                 SqlDataReader reader = await insertedBookingCommand.ExecuteReaderAsync();
 
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     bookingId = (int)reader["idReservacion"];
                 }
+
+                await reader.CloseAsync();
 
                 return (true, "Reservación creada exitosamente.", bookingId);
             }

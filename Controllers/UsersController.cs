@@ -31,7 +31,7 @@ namespace ProyectoFinal_PED.Controllers
 
                 User foundUser = null;
 
-                while (reader.Read()) { 
+                while (await reader.ReadAsync()) { 
                     var id = reader["idUsuario"];
                     var userType = reader["idTipoUsuario"];
                     var usernameFromDB = reader["usuario"];

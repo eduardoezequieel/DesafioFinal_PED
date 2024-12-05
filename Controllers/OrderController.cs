@@ -116,6 +116,8 @@ namespace ProyectoFinal_PED.Controllers
                     total = (Decimal)reader["total"];
                 }
 
+                await reader.CloseAsync();
+
                 string updateQuery = "UPDATE orden SET total = @total WHERE idOrden = @orderId";
                 SqlCommand updateCommand = new SqlCommand(updateQuery, cn);
 
@@ -397,6 +399,8 @@ namespace ProyectoFinal_PED.Controllers
                         (DateTime)startTime,
                         (DateTime)endTime);
                 }
+
+                await reader.CloseAsync();
 
                 string updateBookingQuery = "UPDATE reservacion SET idEstadoReservacion = 2 WHERE idReservacion = @bookingId";
 

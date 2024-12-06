@@ -1,5 +1,8 @@
-# Desafio Final PED
+# Desafio Final PED Fase 1
 Enlace de video exponiendo: https://drive.google.com/file/d/1KR-TOSTIXphxHjuYrAPLTEDsG1IGaKwV/view?usp=sharing 
+
+# Desafio Final PED Fase 2
+Enlace de video exponiendo: https://www.youtube.com/watch?v=TS1VSux_6Cs
 
 ## Integrantes
 - Crespin Lozano Christian Gustavo CL060107

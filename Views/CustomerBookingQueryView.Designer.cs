@@ -119,7 +119,7 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(250, 125, 95);
+            btnBack.BackColor = Color.FromArgb(255, 97, 97);
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -134,7 +134,7 @@
             // 
             // btnCheckBooking
             // 
-            btnCheckBooking.BackColor = Color.FromArgb(250, 125, 95);
+            btnCheckBooking.BackColor = Color.FromArgb(255, 97, 97);
             btnCheckBooking.FlatAppearance.BorderSize = 0;
             btnCheckBooking.FlatStyle = FlatStyle.Flat;
             btnCheckBooking.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

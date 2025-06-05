@@ -120,7 +120,7 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(250, 125, 95);
+            btnBack.BackColor = Color.FromArgb(255, 97, 97);
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -135,7 +135,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.FromArgb(250, 125, 95);
+            btnAdd.BackColor = Color.FromArgb(255, 97, 97);
             btnAdd.FlatAppearance.BorderSize = 0;
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

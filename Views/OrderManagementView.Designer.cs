@@ -30,14 +30,14 @@
         {
             label1 = new Label();
             ordersTbl = new DataGridView();
-            loadingSpinner = new Label();
-            btnAddOrder = new Button();
             id = new DataGridViewTextBoxColumn();
             paymentMethod = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
             customer = new DataGridViewTextBoxColumn();
             total = new DataGridViewTextBoxColumn();
             updateBtn = new DataGridViewButtonColumn();
+            loadingSpinner = new Label();
+            btnAddOrder = new Button();
             ((System.ComponentModel.ISupportInitialize)ordersTbl).BeginInit();
             SuspendLayout();
             // 
@@ -70,30 +70,6 @@
             ordersTbl.Size = new Size(986, 530);
             ordersTbl.TabIndex = 8;
             ordersTbl.CellContentClick += ordersTbl_CellContentClick;
-            // 
-            // loadingSpinner
-            // 
-            loadingSpinner.AutoSize = true;
-            loadingSpinner.Location = new Point(477, 381);
-            loadingSpinner.Name = "loadingSpinner";
-            loadingSpinner.Size = new Size(68, 15);
-            loadingSpinner.TabIndex = 9;
-            loadingSpinner.Text = "Cargando...";
-            // 
-            // btnAddOrder
-            // 
-            btnAddOrder.BackColor = Color.FromArgb(250, 125, 95);
-            btnAddOrder.FlatAppearance.BorderSize = 0;
-            btnAddOrder.FlatStyle = FlatStyle.Flat;
-            btnAddOrder.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddOrder.ForeColor = SystemColors.ButtonHighlight;
-            btnAddOrder.Location = new Point(839, 53);
-            btnAddOrder.Name = "btnAddOrder";
-            btnAddOrder.Size = new Size(163, 45);
-            btnAddOrder.TabIndex = 10;
-            btnAddOrder.Text = "Crear orden";
-            btnAddOrder.UseVisualStyleBackColor = false;
-            btnAddOrder.Click += btnAddOrder_Click;
             // 
             // id
             // 
@@ -135,6 +111,30 @@
             updateBtn.Text = "Editar";
             updateBtn.ToolTipText = "Editar";
             updateBtn.UseColumnTextForButtonValue = true;
+            // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(477, 381);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 9;
+            loadingSpinner.Text = "Cargando...";
+            // 
+            // btnAddOrder
+            // 
+            btnAddOrder.BackColor = Color.FromArgb(255, 97, 97);
+            btnAddOrder.FlatAppearance.BorderSize = 0;
+            btnAddOrder.FlatStyle = FlatStyle.Flat;
+            btnAddOrder.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddOrder.ForeColor = SystemColors.ButtonHighlight;
+            btnAddOrder.Location = new Point(839, 53);
+            btnAddOrder.Name = "btnAddOrder";
+            btnAddOrder.Size = new Size(163, 45);
+            btnAddOrder.TabIndex = 10;
+            btnAddOrder.Text = "Crear orden";
+            btnAddOrder.UseVisualStyleBackColor = false;
+            btnAddOrder.Click += btnAddOrder_Click;
             // 
             // OrderManagementView
             // 

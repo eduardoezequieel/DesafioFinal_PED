@@ -30,11 +30,6 @@
         {
             label1 = new Label();
             bookingsTbl = new DataGridView();
-            loadingSpinner = new Label();
-            btnOpenBookingForm = new Button();
-            label3 = new Label();
-            panel3 = new Panel();
-            dtCurrentDate = new DateTimePicker();
             id = new DataGridViewTextBoxColumn();
             table = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
@@ -42,6 +37,11 @@
             startDate = new DataGridViewTextBoxColumn();
             endDate = new DataGridViewTextBoxColumn();
             cancelBtn = new DataGridViewButtonColumn();
+            loadingSpinner = new Label();
+            btnOpenBookingForm = new Button();
+            label3 = new Label();
+            panel3 = new Panel();
+            dtCurrentDate = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)bookingsTbl).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -75,61 +75,6 @@
             bookingsTbl.Size = new Size(986, 530);
             bookingsTbl.TabIndex = 8;
             bookingsTbl.CellContentClick += bookingsTbl_CellContentClick;
-            // 
-            // loadingSpinner
-            // 
-            loadingSpinner.AutoSize = true;
-            loadingSpinner.Location = new Point(477, 381);
-            loadingSpinner.Name = "loadingSpinner";
-            loadingSpinner.Size = new Size(68, 15);
-            loadingSpinner.TabIndex = 9;
-            loadingSpinner.Text = "Cargando...";
-            // 
-            // btnOpenBookingForm
-            // 
-            btnOpenBookingForm.BackColor = Color.FromArgb(250, 125, 95);
-            btnOpenBookingForm.FlatAppearance.BorderSize = 0;
-            btnOpenBookingForm.FlatStyle = FlatStyle.Flat;
-            btnOpenBookingForm.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnOpenBookingForm.ForeColor = SystemColors.ButtonHighlight;
-            btnOpenBookingForm.Location = new Point(765, 53);
-            btnOpenBookingForm.Name = "btnOpenBookingForm";
-            btnOpenBookingForm.Size = new Size(235, 45);
-            btnOpenBookingForm.TabIndex = 10;
-            btnOpenBookingForm.Text = "Crear nueva reservación";
-            btnOpenBookingForm.UseVisualStyleBackColor = false;
-            btnOpenBookingForm.Click += btnOpenBookingForm_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(8, 51, 83);
-            label3.Location = new Point(18, 63);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 25);
-            label3.TabIndex = 20;
-            label3.Text = "Fecha";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(247, 246, 244);
-            panel3.Controls.Add(dtCurrentDate);
-            panel3.Location = new Point(82, 56);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(197, 42);
-            panel3.TabIndex = 19;
-            // 
-            // dtCurrentDate
-            // 
-            dtCurrentDate.CalendarMonthBackground = Color.FromArgb(247, 246, 244);
-            dtCurrentDate.CustomFormat = "";
-            dtCurrentDate.Format = DateTimePickerFormat.Short;
-            dtCurrentDate.Location = new Point(8, 9);
-            dtCurrentDate.Name = "dtCurrentDate";
-            dtCurrentDate.Size = new Size(183, 23);
-            dtCurrentDate.TabIndex = 3;
-            dtCurrentDate.ValueChanged += dtCurrentDate_ValueChanged;
             // 
             // id
             // 
@@ -177,6 +122,61 @@
             cancelBtn.Text = "Cancelar";
             cancelBtn.ToolTipText = "Cancelar";
             cancelBtn.UseColumnTextForButtonValue = true;
+            // 
+            // loadingSpinner
+            // 
+            loadingSpinner.AutoSize = true;
+            loadingSpinner.Location = new Point(477, 381);
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(68, 15);
+            loadingSpinner.TabIndex = 9;
+            loadingSpinner.Text = "Cargando...";
+            // 
+            // btnOpenBookingForm
+            // 
+            btnOpenBookingForm.BackColor = Color.FromArgb(255, 97, 97);
+            btnOpenBookingForm.FlatAppearance.BorderSize = 0;
+            btnOpenBookingForm.FlatStyle = FlatStyle.Flat;
+            btnOpenBookingForm.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOpenBookingForm.ForeColor = SystemColors.ButtonHighlight;
+            btnOpenBookingForm.Location = new Point(765, 53);
+            btnOpenBookingForm.Name = "btnOpenBookingForm";
+            btnOpenBookingForm.Size = new Size(235, 45);
+            btnOpenBookingForm.TabIndex = 10;
+            btnOpenBookingForm.Text = "Crear nueva reservación";
+            btnOpenBookingForm.UseVisualStyleBackColor = false;
+            btnOpenBookingForm.Click += btnOpenBookingForm_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(8, 51, 83);
+            label3.Location = new Point(18, 63);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 25);
+            label3.TabIndex = 20;
+            label3.Text = "Fecha";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(247, 246, 244);
+            panel3.Controls.Add(dtCurrentDate);
+            panel3.Location = new Point(82, 56);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(197, 42);
+            panel3.TabIndex = 19;
+            // 
+            // dtCurrentDate
+            // 
+            dtCurrentDate.CalendarMonthBackground = Color.FromArgb(247, 246, 244);
+            dtCurrentDate.CustomFormat = "";
+            dtCurrentDate.Format = DateTimePickerFormat.Short;
+            dtCurrentDate.Location = new Point(8, 9);
+            dtCurrentDate.Name = "dtCurrentDate";
+            dtCurrentDate.Size = new Size(183, 23);
+            dtCurrentDate.TabIndex = 3;
+            dtCurrentDate.ValueChanged += dtCurrentDate_ValueChanged;
             // 
             // CustomerBookingManagementView
             // 

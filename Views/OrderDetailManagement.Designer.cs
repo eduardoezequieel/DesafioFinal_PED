@@ -175,7 +175,7 @@
             // 
             // btnAddDetail
             // 
-            btnAddDetail.BackColor = Color.FromArgb(250, 125, 95);
+            btnAddDetail.BackColor = Color.FromArgb(255, 97, 97);
             btnAddDetail.FlatAppearance.BorderSize = 0;
             btnAddDetail.FlatStyle = FlatStyle.Flat;
             btnAddDetail.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -234,7 +234,7 @@
             // 
             // btnPay
             // 
-            btnPay.BackColor = Color.FromArgb(250, 125, 95);
+            btnPay.BackColor = Color.FromArgb(255, 97, 97);
             btnPay.FlatAppearance.BorderSize = 0;
             btnPay.FlatStyle = FlatStyle.Flat;
             btnPay.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -249,7 +249,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.BackColor = Color.FromArgb(250, 125, 95);
+            btnCancel.BackColor = Color.FromArgb(255, 97, 97);
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -264,7 +264,7 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(250, 125, 95);
+            btnBack.BackColor = Color.FromArgb(255, 97, 97);
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

@@ -1,7 +1,7 @@
-CREATE DATABASE saborLocal;
+CREATE DATABASE epocaBistro;
 GO
 
-USE saborLocal;
+USE epocaBistro;
 GO
 
 CREATE TABLE tipo_usuario( 

@@ -83,7 +83,7 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(250, 125, 95);
+            btnBack.BackColor = Color.FromArgb(255, 97, 97);
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -98,7 +98,7 @@
             // 
             // btnSubmit
             // 
-            btnSubmit.BackColor = Color.FromArgb(250, 125, 95);
+            btnSubmit.BackColor = Color.FromArgb(255, 97, 97);
             btnSubmit.FlatAppearance.BorderSize = 0;
             btnSubmit.FlatStyle = FlatStyle.Flat;
             btnSubmit.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

@@ -31,6 +31,7 @@
             btnClose = new Button();
             btnMinimize = new Button();
             panel1 = new Panel();
+            btnLogOut = new Button();
             userLbl = new Label();
             btnOrders = new Button();
             btnReservas = new Button();
@@ -39,7 +40,6 @@
             btnHome = new Button();
             btnUsers = new Button();
             panelContainer = new Panel();
-            btnLogOut = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(250, 125, 95);
+            panel1.BackColor = Color.FromArgb(255, 128, 128);
             panel1.Controls.Add(btnLogOut);
             panel1.Controls.Add(userLbl);
             panel1.Controls.Add(btnOrders);
@@ -88,6 +88,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(229, 724);
             panel1.TabIndex = 11;
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.BackColor = Color.FromArgb(255, 97, 97);
+            btnLogOut.FlatAppearance.BorderSize = 0;
+            btnLogOut.FlatStyle = FlatStyle.Flat;
+            btnLogOut.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogOut.ForeColor = SystemColors.ButtonHighlight;
+            btnLogOut.Location = new Point(12, 673);
+            btnLogOut.Margin = new Padding(3, 2, 3, 2);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(207, 36);
+            btnLogOut.TabIndex = 22;
+            btnLogOut.Text = "Cerrar sesión";
+            btnLogOut.UseVisualStyleBackColor = false;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // userLbl
             // 
@@ -102,7 +118,7 @@
             // 
             // btnOrders
             // 
-            btnOrders.BackColor = Color.FromArgb(255, 109, 72);
+            btnOrders.BackColor = Color.FromArgb(255, 97, 97);
             btnOrders.FlatAppearance.BorderSize = 0;
             btnOrders.FlatStyle = FlatStyle.Flat;
             btnOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -118,7 +134,7 @@
             // 
             // btnReservas
             // 
-            btnReservas.BackColor = Color.FromArgb(255, 109, 72);
+            btnReservas.BackColor = Color.FromArgb(255, 97, 97);
             btnReservas.FlatAppearance.BorderSize = 0;
             btnReservas.FlatStyle = FlatStyle.Flat;
             btnReservas.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -134,7 +150,7 @@
             // 
             // btnMesas
             // 
-            btnMesas.BackColor = Color.FromArgb(255, 109, 72);
+            btnMesas.BackColor = Color.FromArgb(255, 97, 97);
             btnMesas.FlatAppearance.BorderSize = 0;
             btnMesas.FlatStyle = FlatStyle.Flat;
             btnMesas.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -150,7 +166,7 @@
             // 
             // btnMenu
             // 
-            btnMenu.BackColor = Color.FromArgb(255, 109, 72);
+            btnMenu.BackColor = Color.FromArgb(255, 97, 97);
             btnMenu.FlatAppearance.BorderSize = 0;
             btnMenu.FlatStyle = FlatStyle.Flat;
             btnMenu.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -166,7 +182,7 @@
             // 
             // btnHome
             // 
-            btnHome.BackColor = Color.FromArgb(255, 109, 72);
+            btnHome.BackColor = Color.FromArgb(255, 97, 97);
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
             btnHome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -181,7 +197,7 @@
             // 
             // btnUsers
             // 
-            btnUsers.BackColor = Color.FromArgb(255, 109, 72);
+            btnUsers.BackColor = Color.FromArgb(255, 97, 97);
             btnUsers.FlatAppearance.BorderSize = 0;
             btnUsers.FlatStyle = FlatStyle.Flat;
             btnUsers.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -201,22 +217,6 @@
             panelContainer.Size = new Size(1019, 663);
             panelContainer.TabIndex = 12;
             panelContainer.Paint += d;
-            // 
-            // btnLogOut
-            // 
-            btnLogOut.BackColor = Color.FromArgb(255, 109, 72);
-            btnLogOut.FlatAppearance.BorderSize = 0;
-            btnLogOut.FlatStyle = FlatStyle.Flat;
-            btnLogOut.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogOut.ForeColor = SystemColors.ButtonHighlight;
-            btnLogOut.Location = new Point(12, 673);
-            btnLogOut.Margin = new Padding(3, 2, 3, 2);
-            btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(207, 36);
-            btnLogOut.TabIndex = 22;
-            btnLogOut.Text = "Cerrar sesión";
-            btnLogOut.UseVisualStyleBackColor = false;
-            btnLogOut.Click += btnLogOut_Click;
             // 
             // DashboardView
             // 

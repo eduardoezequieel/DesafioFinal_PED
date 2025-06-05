@@ -114,7 +114,7 @@
             // 
             // btnAddUser
             // 
-            btnAddUser.BackColor = Color.FromArgb(250, 125, 95);
+            btnAddUser.BackColor = Color.FromArgb(255, 97, 97);
             btnAddUser.FlatAppearance.BorderSize = 0;
             btnAddUser.FlatStyle = FlatStyle.Flat;
             btnAddUser.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

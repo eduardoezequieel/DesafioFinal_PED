@@ -52,7 +52,7 @@
             // 
             // btnAddTable
             // 
-            btnAddTable.BackColor = Color.FromArgb(250, 125, 95);
+            btnAddTable.BackColor = Color.FromArgb(255, 97, 97);
             btnAddTable.FlatAppearance.BorderSize = 0;
             btnAddTable.FlatStyle = FlatStyle.Flat;
             btnAddTable.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

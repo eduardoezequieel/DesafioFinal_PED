@@ -109,7 +109,7 @@
             // 
             // btnContinue
             // 
-            btnContinue.BackColor = Color.FromArgb(250, 125, 95);
+            btnContinue.BackColor = Color.FromArgb(255, 128, 128);
             btnContinue.FlatAppearance.BorderSize = 0;
             btnContinue.FlatStyle = FlatStyle.Flat;
             btnContinue.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);

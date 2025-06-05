@@ -1,12 +1,10 @@
-# Desafio Final PED Fase 1
-Enlace de video exponiendo: https://drive.google.com/file/d/1KR-TOSTIXphxHjuYrAPLTEDsG1IGaKwV/view?usp=sharing 
-
-# Desafio Final PED Fase 2
-Enlace de video exponiendo: https://www.youtube.com/watch?v=TS1VSux_6Cs
+# Fase 3 ADS
 
 ## Integrantes
-- Crespin Lozano Christian Gustavo CL060107
-- Esnard Romero Diego Guillermo ER231474
-- Hernández Cerón Kevin Alexander HC162209
-- López Martínez Diego René LM231893
-- López Rivera Eduardo Ezequiel LR230061
+- López Rivera Eduardo Ezequiel LR230061 
+- López Martínez Diego René LM231893 
+- Morales Ayala Emily Giovanna MA233396 
+- Hernández Abrego Jairo José HA190640 
+- Hernández Ramírez Hazel Marbeli HR210509 
+
+
